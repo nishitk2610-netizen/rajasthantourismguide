@@ -1,4 +1,5 @@
 import { BlogArticle } from '../types';
+import { destinationImages } from './destinationImages';
 
 export const blogsData: BlogArticle[] = [
   {
@@ -12,11 +13,11 @@ export const blogsData: BlogArticle[] = [
     readingTime: '7 min read',
     wordCount: 840,
     featuredImage: {
-      url: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Hawa Mahal Palace of Winds with red and pink sandstone windows in Jaipur',
-      caption: 'The honeycomb facade of Hawa Mahal rising gracefully over the streets of old Jaipur.',
-      photographer: 'Annie Spratt',
-      sourceUrl: 'https://unsplash.com'
+      url: destinationImages.jaipurHawaMahal.url,
+      alt: destinationImages.jaipurHawaMahal.alt,
+      caption: destinationImages.jaipurHawaMahal.caption,
+      photographer: destinationImages.jaipurHawaMahal.photographer,
+      sourceUrl: destinationImages.jaipurHawaMahal.sourcePage
     },
     author: {
       name: 'Dr. Vikramaditya Singh',
@@ -36,6 +37,13 @@ export const blogsData: BlogArticle[] = [
           type: 'tip',
           title: 'Smart Ticket Tip',
           content: 'Purchase the Rajasthan Department of Archaeology Composite Ticket (approx ₹100 for Indian citizens, ₹550 for foreign tourists) at Amber Fort. It provides admission to Amber Fort, Hawa Mahal, Jantar Mantar, Nahargarh, and Albert Hall Museum, saving up to 40% in fees and eliminating long ticket queues.'
+        },
+        inlineImage: {
+          url: destinationImages.jaipurAmberFort.url,
+          alt: destinationImages.jaipurAmberFort.alt,
+          caption: destinationImages.jaipurAmberFort.caption,
+          photographer: destinationImages.jaipurAmberFort.photographer,
+          sourceUrl: destinationImages.jaipurAmberFort.sourcePage
         }
       },
       {
@@ -47,10 +55,11 @@ export const blogsData: BlogArticle[] = [
           'Directly across from the palace sits Jantar Mantar, a UNESCO World Heritage collection of nineteen architectural astronomical instruments built between 1728 and 1734. The centerpiece is the 27-meter-high Vrihat Samrat Yantra, the world’s largest stone sundial, capable of measuring local solar time with an astonishing precision of within two seconds.'
         ],
         inlineImage: {
-          url: 'https://images.unsplash.com/photo-1603288967758-a9fa432d8816?auto=format&fit=crop&w=1000&q=80',
-          alt: 'Amber Fort courtyard overlooking the mountains',
-          caption: 'Amber Fort’s majestic courtyards and defense bastions perched high in the Aravali hills.',
-          photographer: 'Sylwia Bartyzel'
+          url: destinationImages.jaipurJantarMantar.url,
+          alt: destinationImages.jaipurJantarMantar.alt,
+          caption: destinationImages.jaipurJantarMantar.caption,
+          photographer: destinationImages.jaipurJantarMantar.photographer,
+          sourceUrl: destinationImages.jaipurJantarMantar.sourcePage
         }
       },
       {
@@ -93,11 +102,11 @@ export const blogsData: BlogArticle[] = [
     readingTime: '8 min read',
     wordCount: 880,
     featuredImage: {
-      url: 'https://images.unsplash.com/photo-1615836245337-f5b9b2303f10?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Lake Pichola sunset with City Palace and Aravali mountains in Udaipur',
-      caption: 'Golden hour tranquility on Lake Pichola with the Mewar City Palace reflecting in the calm waters.',
-      photographer: 'Fardeen Khaleel',
-      sourceUrl: 'https://unsplash.com'
+      url: destinationImages.udaipurLakePichola.url,
+      alt: destinationImages.udaipurLakePichola.alt,
+      caption: destinationImages.udaipurLakePichola.caption,
+      photographer: destinationImages.udaipurLakePichola.photographer,
+      sourceUrl: destinationImages.udaipurLakePichola.sourcePage
     },
     author: {
       name: 'Ananya Rathore',
@@ -117,6 +126,13 @@ export const blogsData: BlogArticle[] = [
           type: 'history',
           title: 'Mewar Sovereign Legacy',
           content: 'Unlike other princely states that forged alliances with the Mughal empire, the Ranas of Mewar fought fiercely under Maharana Pratap to maintain their cultural autonomy, a proud heritage evident across Udaipur’s insignia and memorials.'
+        },
+        inlineImage: {
+          url: destinationImages.udaipurCityPalace.url,
+          alt: destinationImages.udaipurCityPalace.alt,
+          caption: destinationImages.udaipurCityPalace.caption,
+          photographer: destinationImages.udaipurCityPalace.photographer,
+          sourceUrl: destinationImages.udaipurCityPalace.sourcePage
         }
       },
       {
@@ -127,10 +143,11 @@ export const blogsData: BlogArticle[] = [
           'At the center of the lake floats the Taj Lake Palace (originally Jag Niwas), built in 1746 as a summer pleasure retreat. Downlake lies Jag Mandir, also known as the Lake Garden Palace. Historical records suggest that Mughal Prince Khurram (later Emperor Shah Jahan) took refuge here in 1623, drawing inspiration from Jag Mandir’s marble domes and pietra dura inlay for the eventual creation of the Taj Mahal.'
         ],
         inlineImage: {
-          url: 'https://images.unsplash.com/photo-1591289009723-aef0a1a8a211?auto=format&fit=crop&w=1000&q=80',
-          alt: 'City Palace Udaipur marble arches looking onto the lake',
-          caption: 'The ornate marble jharokhas of Udaipur City Palace framing Lake Pichola.',
-          photographer: 'Sagar Dani'
+          url: destinationImages.udaipurJagMandir.url,
+          alt: destinationImages.udaipurJagMandir.alt,
+          caption: destinationImages.udaipurJagMandir.caption,
+          photographer: destinationImages.udaipurJagMandir.photographer,
+          sourceUrl: destinationImages.udaipurJagMandir.sourcePage
         }
       },
       {
@@ -172,11 +189,11 @@ export const blogsData: BlogArticle[] = [
     readingTime: '8 min read',
     wordCount: 860,
     featuredImage: {
-      url: 'https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Jaisalmer Fort glowing golden at dusk over the Thar Desert city',
-      caption: 'The magnificent yellow sandstone ramparts of Jaisalmer Fort (Sonar Qila) illuminated at sunset.',
-      photographer: 'Ibrahim Rifath',
-      sourceUrl: 'https://unsplash.com'
+      url: destinationImages.jaisalmerSonarQila.url,
+      alt: destinationImages.jaisalmerSonarQila.alt,
+      caption: destinationImages.jaisalmerSonarQila.caption,
+      photographer: destinationImages.jaisalmerSonarQila.photographer,
+      sourceUrl: destinationImages.jaisalmerSonarQila.sourcePage
     },
     author: {
       name: 'Rohan Meena',
@@ -206,10 +223,11 @@ export const blogsData: BlogArticle[] = [
           'The most magnificent of these is Patwon Ki Haveli, a cluster of five residences built over fifty years by Guman Chand Patwa for his five sons. Every square inch of its exterior facade is covered in perforated stone screens (jalis), projecting oriel balconies, and miniature pillars. Nearby, Salim Singh Ki Haveli, built by a ruthless prime minister, boasts an arched peacock-shaped upper balcony that seems to hover in midair.'
         ],
         inlineImage: {
-          url: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1000&q=80',
-          alt: 'Pristine rippled sand dunes in Thar Desert near Jaisalmer',
-          caption: 'Wind-rippled ridges of the Thar Desert near Jaisalmer during sunset.',
-          photographer: 'Jeremy Bishop'
+          url: destinationImages.jaisalmerPatwonHaveli.url,
+          alt: destinationImages.jaisalmerPatwonHaveli.alt,
+          caption: destinationImages.jaisalmerPatwonHaveli.caption,
+          photographer: destinationImages.jaisalmerPatwonHaveli.photographer,
+          sourceUrl: destinationImages.jaisalmerPatwonHaveli.sourcePage
         }
       },
       {
@@ -218,7 +236,14 @@ export const blogsData: BlogArticle[] = [
         paragraphs: [
           'No visit to Jaisalmer is complete without venturing into the Thar Desert. Located approximately 42 kilometers west of the city, Sam Sand Dunes offer tall, sweeping dunes where visitors can embark on camel safaris or thrilling 4x4 dune-bashing drives as the sun sinks beneath the horizon.',
           'By night, traditional desert camps come alive around open campfires. Renowned Manganiyar musicians play the ancient kamaicha (a 17-string bowed instrument made of mango wood) and the khartal (castanets), their hauntingly powerful voices singing ancestral ballads of love, rain, and desert valor. For travelers seeking a tranquil wilderness experience without quad-bikes and loud speakers, the dunes around Khuri village or Barna provide pristine quiet under a brilliant canopy of stars.'
-        ]
+        ],
+        inlineImage: {
+          url: destinationImages.jaisalmerSamDunes.url,
+          alt: destinationImages.jaisalmerSamDunes.alt,
+          caption: destinationImages.jaisalmerSamDunes.caption,
+          photographer: destinationImages.jaisalmerSamDunes.photographer,
+          sourceUrl: destinationImages.jaisalmerSamDunes.sourcePage
+        }
       }
     ],
     practicalTravelGuide: {
@@ -251,11 +276,11 @@ export const blogsData: BlogArticle[] = [
     readingTime: '7 min read',
     wordCount: 820,
     featuredImage: {
-      url: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Mehrangarh Fort looming over the blue houses of Jodhpur',
-      caption: 'Mehrangarh Fort rises 400 feet above the ocean of indigo-washed houses in Jodhpur.',
-      photographer: 'Naveed Ahmed',
-      sourceUrl: 'https://unsplash.com'
+      url: destinationImages.jodhpurMehrangarh.url,
+      alt: destinationImages.jodhpurMehrangarh.alt,
+      caption: destinationImages.jodhpurMehrangarh.caption,
+      photographer: destinationImages.jodhpurMehrangarh.photographer,
+      sourceUrl: destinationImages.jodhpurMehrangarh.sourcePage
     },
     author: {
       name: 'Dr. Vikramaditya Singh',
@@ -283,14 +308,28 @@ export const blogsData: BlogArticle[] = [
         paragraphs: [
           'A gentle downhill walk from Mehrangarh brings you to Jaswant Thada, a royal white marble memorial built in 1899 for Maharaja Jaswant Singh II. Constructed from extremely thin, polished sheets of Makrana marble, the cenotaph glows with an angelic translucence when backlit by the morning sun.',
           'To experience the genuine Blue City, venture into the Navchokiya quarter of the old city. Historically, local Brahmins painted their homes with a copper sulfate and limestone wash to denote priestly status, repel desert termites, and keep interior temperatures cool during blazing summers. Strolling through these narrow, winding alleys reveals hidden stepwells, vibrant doorways, and friendly chai sellers greeting passersby.'
-        ]
+        ],
+        inlineImage: {
+          url: destinationImages.jodhpurJaswantThada.url,
+          alt: destinationImages.jodhpurJaswantThada.alt,
+          caption: destinationImages.jodhpurJaswantThada.caption,
+          photographer: destinationImages.jodhpurJaswantThada.photographer,
+          sourceUrl: destinationImages.jodhpurJaswantThada.sourcePage
+        }
       },
       {
         heading: '3. Sardar Market, Clock Tower, and Culinary Treasures',
         subheading: 'Spices, Mirchi Vada, and Mawa Kachori',
         paragraphs: [
           'At the energetic heart of the city stands Ghanta Ghar (Clock Tower), surrounded by the bustling Sardar Market. The air here is pungent with Mathania red chilies, turmeric, cloves, and leather wares. Jodhpur is universally famous for its culinary indulgence. Stop by Shahi Samosa near the clock tower for a piping-hot, crispy Mirchi Vada (spiced potato stuffed in a large banana pepper, batter-fried to perfection). For dessert, head to Janta Sweet Home for Mawa Kachori, a rich puff pastry stuffed with sweetened mawa and soaked in saffron syrup.'
-        ]
+        ],
+        inlineImage: {
+          url: destinationImages.jodhpurBlueCity.url,
+          alt: destinationImages.jodhpurBlueCity.alt,
+          caption: destinationImages.jodhpurBlueCity.caption,
+          photographer: destinationImages.jodhpurBlueCity.photographer,
+          sourceUrl: destinationImages.jodhpurBlueCity.sourcePage
+        }
       }
     ],
     practicalTravelGuide: {
@@ -323,11 +362,11 @@ export const blogsData: BlogArticle[] = [
     readingTime: '9 min read',
     wordCount: 890,
     featuredImage: {
-      url: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Scenic winding roads and fort ramparts in Rajasthan hills',
-      caption: 'The open highways of Rajasthan connect ancient fortresses, rural hamlets, and historic cities.',
-      photographer: 'Deepesh Shrestha',
-      sourceUrl: 'https://unsplash.com'
+      url: destinationImages.chittorgarhFort.url,
+      alt: destinationImages.chittorgarhFort.alt,
+      caption: destinationImages.chittorgarhFort.caption,
+      photographer: destinationImages.chittorgarhFort.photographer,
+      sourceUrl: destinationImages.chittorgarhFort.sourcePage
     },
     author: {
       name: 'Rohan Meena',
@@ -367,11 +406,18 @@ export const blogsData: BlogArticle[] = [
       },
       {
         heading: 'Phase 4: Fortresses and Romantic Lakes (Days 11–13)',
-        subheading: 'Jaisalmer -> Ranakpur -> Udaipur (490 km | Recommended overnight stop)',
+        subheading: 'Jaisalmer -> Ranakpur -> Kumbhalgarh -> Udaipur (490 km | Recommended stopover)',
         paragraphs: [
-          'From Jaisalmer, head south toward Udaipur. To avoid a single 8-hour drive, take a stopover at Ranakpur to witness the 1,444 uniquely carved marble pillars of the 15th-century Chaumukha Jain Temple nestled in the lush Aravali hills.',
+          'From Jaisalmer, head south toward Udaipur. Take a scenic stopover at Kumbhalgarh Fort to marvel at the 36-kilometer Great Wall of India crowning the Aravali peaks, followed by Ranakpur’s 1,444 carved marble pillars.',
           'Conclude your grand tour in Udaipur with two leisurely days taking sunset boat cruises on Lake Pichola, touring the Mewar City Palace, and enjoying candlelit rooftop dining.'
-        ]
+        ],
+        inlineImage: {
+          url: destinationImages.kumbhalgarhFort.url,
+          alt: destinationImages.kumbhalgarhFort.alt,
+          caption: destinationImages.kumbhalgarhFort.caption,
+          photographer: destinationImages.kumbhalgarhFort.photographer,
+          sourceUrl: destinationImages.kumbhalgarhFort.sourcePage
+        }
       }
     ],
     practicalTravelGuide: {
@@ -405,7 +451,7 @@ export const blogsData: BlogArticle[] = [
     wordCount: 850,
     featuredImage: {
       url: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Traditional Indian thali feast with flavorful curries and flatbreads',
+      alt: 'Traditional authentic Rajasthani thali feast with lentils, curries, and flatbreads',
       caption: 'A lavish Rajasthani thali featuring rich lentils, aromatic curries, chutneys, and breads.',
       photographer: 'Anil Sharma',
       sourceUrl: 'https://unsplash.com'
@@ -477,11 +523,11 @@ export const blogsData: BlogArticle[] = [
     readingTime: '9 min read',
     wordCount: 875,
     featuredImage: {
-      url: 'https://images.unsplash.com/photo-1603288967758-a9fa432d8816?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Massive sandstone fort ramparts stretching across mountains in Rajasthan',
-      caption: 'The imposing stone bastions and curtain walls of Rajasthan hill forts that defended kingdoms for centuries.',
-      photographer: 'Sylwia Bartyzel',
-      sourceUrl: 'https://unsplash.com'
+      url: destinationImages.kumbhalgarhFort.url,
+      alt: destinationImages.kumbhalgarhFort.alt,
+      caption: destinationImages.kumbhalgarhFort.caption,
+      photographer: destinationImages.kumbhalgarhFort.photographer,
+      sourceUrl: destinationImages.kumbhalgarhFort.sourcePage
     },
     author: {
       name: 'Dr. Vikramaditya Singh',
@@ -504,12 +550,19 @@ export const blogsData: BlogArticle[] = [
         }
       },
       {
-        heading: '2. Desert Citadels: Mehrangarh and Jaisalmer Fort',
+        heading: '2. Desert Citadels: Mehrangarh, Junagarh, and Jaisalmer Fort',
         subheading: 'Defying the Sands of the Thar',
         paragraphs: [
           'While the forts of eastern Rajasthan capitalize on rocky Aravali crags, the western forts master the harsh desert. Mehrangarh in Jodhpur looms over the desert landscape like an artificial mountain, its soaring curved battlements appearing to grow directly out of the bedrock.',
-          'Further west in Jaisalmer, the Golden Fort (Sonar Qila) relied upon golden sandstone and natural desert isolation along the Silk Route. Both forts feature complex multi-gate entry systems engineered with steep 90-degree turns to neutralize the battering power of war elephants.'
-        ]
+          'Further northwest in Bikaner, Junagarh Fort stands out as a rare plains fortress that was never conquered in battle, adorned with delicate Anup Mahal gilded woodwork. In Jaisalmer, the Golden Fort (Sonar Qila) relied upon yellow sandstone and natural desert isolation along the Silk Route.'
+        ],
+        inlineImage: {
+          url: destinationImages.bikanerJunagarh.url,
+          alt: destinationImages.bikanerJunagarh.alt,
+          caption: destinationImages.bikanerJunagarh.caption,
+          photographer: destinationImages.bikanerJunagarh.photographer,
+          sourceUrl: destinationImages.bikanerJunagarh.sourcePage
+        }
       },
       {
         heading: '3. Architectural Evolution: From Pure Defense to Palace Luxury',
@@ -550,11 +603,11 @@ export const blogsData: BlogArticle[] = [
     readingTime: '8 min read',
     wordCount: 840,
     featuredImage: {
-      url: 'https://images.unsplash.com/photo-1566833925252-70b5534c0e6e?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Celebratory festival colors and decorations along Pushkar Lake',
-      caption: 'Pushkar Lake during the festive autumn season when millions gather for spiritual devotion and cultural melas.',
-      photographer: 'Abhishek Prasad',
-      sourceUrl: 'https://unsplash.com'
+      url: destinationImages.pushkarLake.url,
+      alt: destinationImages.pushkarLake.alt,
+      caption: destinationImages.pushkarLake.caption,
+      photographer: destinationImages.pushkarLake.photographer,
+      sourceUrl: destinationImages.pushkarLake.sourcePage
     },
     author: {
       name: 'Ananya Rathore',
@@ -582,7 +635,14 @@ export const blogsData: BlogArticle[] = [
         paragraphs: [
           'While travelers often dismiss monsoons in India, southern Rajasthan—particularly Udaipur, Mount Abu, and Kumbhalgarh—transforms into a verdant, misty wonderland. The Aravali hills turn emerald green, cascading seasonal waterfalls emerge, and the historic lakes refill to their brims.',
           'Monsoon travel also brings substantial advantages: hotel rates drop by 30% to 50%, iconic monuments are free of crushing tourist crowds, and the temperature cools considerably from the peak summer highs.'
-        ]
+        ],
+        inlineImage: {
+          url: destinationImages.mountAbuNakkiLake.url,
+          alt: destinationImages.mountAbuNakkiLake.alt,
+          caption: destinationImages.mountAbuNakkiLake.caption,
+          photographer: destinationImages.mountAbuNakkiLake.photographer,
+          sourceUrl: destinationImages.mountAbuNakkiLake.sourcePage
+        }
       },
       {
         heading: '3. Major Festivals: When Rajasthan Dazzles in Living Color',
@@ -621,16 +681,16 @@ export const blogsData: BlogArticle[] = [
     title: 'Hidden Gems of Rajasthan: Places Beyond the Popular Tourist Trail',
     metaDescription: 'Explore the secret side of Rajasthan: Discover Bundi’s stepwells, Osian’s ancient sand temples, the giant wall of Kumbhalgarh, Barmer folk crafts, and peaceful Shekhawati havelis.',
     category: 'Offbeat',
-    tags: ['Offbeat Rajasthan', 'Hidden Gems', 'Bundi', 'Kumbhalgarh', 'Osian', 'Shekhawati', 'Stepwells'],
+    tags: ['Offbeat Rajasthan', 'Hidden Gems', 'Bundi', 'Kumbhalgarh', 'Osian', 'Shekhawati', 'Stepwells', 'Barmer'],
     publishedDate: 'September 20, 2026',
     readingTime: '8 min read',
     wordCount: 830,
     featuredImage: {
-      url: 'https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Ancient carved sandstone archways of lesser known heritage fort',
-      caption: 'Beyond the crowded tourist cities lie centuries of preserved stepwells, havelis, and quiet citadels.',
-      photographer: 'Himanshu Dewangan',
-      sourceUrl: 'https://unsplash.com'
+      url: destinationImages.bundiStepwell.url,
+      alt: destinationImages.bundiStepwell.alt,
+      caption: destinationImages.bundiStepwell.caption,
+      photographer: destinationImages.bundiStepwell.photographer,
+      sourceUrl: destinationImages.bundiStepwell.sourcePage
     },
     author: {
       name: 'Rohan Meena',
@@ -640,51 +700,72 @@ export const blogsData: BlogArticle[] = [
     introduction: 'While Jaipur, Udaipur, and Jaisalmer rightly earn global acclaim, the true magic of Rajasthan often whispers from the forgotten corners between them. In these quieter towns, you won’t encounter aggressive touts or crowded selfie sticks. Instead, you will find authentic stepwells, crumbling blue-and-ochre havelis adorned with antique frescoes, and villagers welcoming travelers with sincere, open-hearted smiles.',
     sections: [
       {
-        heading: '1. Bundi: The City of Stepwells and Murals',
+        heading: '1. Bundi: The City of Stepwells and Taragarh Fort',
         subheading: 'Kipling’s "Palace of Goblins" and Medieval Water Architecture',
         paragraphs: [
-          'Tucked into a narrow gorge in the Hadoti region 210 km south of Jaipur, Bundi is one of Rajasthan’s most evocative medieval towns. Rudyard Kipling resided at Bundi’s Sukh Mahal while writing parts of his novel Kim, famously observing that the cliffside Garh Palace seemed built by goblins rather than men.',
-          'Bundi is internationally famous for two things: the stunning miniature murals in the Chitrashala pavilion depicting scenes from the life of Lord Krishna, and over 50 magnificent baoris (stepwells). The crowning achievement is the Raniji Ki Baori, a 46-meter-deep stepwell built in 1699 with intricate stone arches and multi-tiered carved shrines.'
+          'Tucked into a narrow gorge in the Hadoti region 210 km south of Jaipur, Bundi is one of Rajasthan’s most evocative medieval towns. Rudyard Kipling resided at Bundi’s Sukh Mahal while writing parts of his novel Kim, famously observing that the cliffside Garh Palace and Taragarh Fort seemed built by goblins rather than men.',
+          'Bundi is internationally famous for its stepwells (baoris). The crowning achievement is Raniji Ki Baori, a 46-meter-deep stepwell built in 1699 by Rani Nathawat with intricate stone arches, carved toranas, and multi-tiered elephant shrines.'
         ],
         calloutBox: {
           type: 'history',
           title: 'The Frescoes of Chitrashala',
           content: 'The Bundi school of miniature painting is celebrated for its lush depictions of verdant gardens, monsoon skies, peacocks, and expressive lovers, using vibrant turquoise and natural mineral pigments.'
+        },
+        inlineImage: {
+          url: destinationImages.bundiTaragarh.url,
+          alt: destinationImages.bundiTaragarh.alt,
+          caption: destinationImages.bundiTaragarh.caption,
+          photographer: destinationImages.bundiTaragarh.photographer,
+          sourceUrl: destinationImages.bundiTaragarh.sourcePage
         }
       },
       {
-        heading: '2. Shekhawati: The World’s Largest Open-Air Art Gallery',
-        subheading: 'Mandawa, Nawalgarh, and Painted Merchant Mansions',
-        paragraphs: [
-          'Located in the semi-arid triangle northwest of Jaipur, the Shekhawati region comprises historic trading towns like Mandawa, Nawalgarh, Fatehpur, and Ramgarh. Between 1830 and 1930, prosperous Marwari merchant families competed to commission artists to cover every exterior and interior wall of their multi-courtyard havelis with colorful frescoes.',
-          'Walking through the dusty streets of Mandawa is akin to touring a museum. Alongside traditional depictions of Hindu deities and royal processions, quirky 19th-century frescoes feature early European inventions: aeroplanes, gramophones, bicycles, and British soldiers with mustaches and bowler hats.'
-        ]
-      },
-      {
-        heading: '3. Osian and Barmer: Ancient Temples and Desert Craftsmanship',
-        subheading: 'The Khajuraho of Rajasthan and Vibrant Embroideries',
+        heading: '2. Osian: The Ancient Desert Temple Oasis',
+        subheading: 'The Khajuraho of Rajasthan in the Thar Sand',
         paragraphs: [
           'Situated 65 kilometers north of Jodhpur, Osian is an ancient oasis that served as a major trade and religious center between the 8th and 12th centuries. It houses sixteen remarkably preserved Hindu and Jain temples, most notably the Surya (Sun) Temple and Sachiya Mata Temple, earning it the moniker "the Khajuraho of Rajasthan".',
-          'Further southwest near the Pakistani border lies Barmer, a rugged desert town known for uncommercialized wooden carvings, intricate Kashidakari mirror-work embroidery, and authentic clay pottery made by desert artisans.'
-        ]
+          'The intricate sand-carved stone pillars and ceiling mandapas depict scenes from the Ramayana, Krishna Leela, and geometric floral bands preserved intact amidst the arid sands.'
+        ],
+        inlineImage: {
+          url: destinationImages.osianTemples.url,
+          alt: destinationImages.osianTemples.alt,
+          caption: destinationImages.osianTemples.caption,
+          photographer: destinationImages.osianTemples.photographer,
+          sourceUrl: destinationImages.osianTemples.sourcePage
+        }
+      },
+      {
+        heading: '3. Barmer: Kiradu Temples and Desert Craftsmanship',
+        subheading: 'Solanki Stone Sculptures and Mirror-Work Textiles',
+        paragraphs: [
+          'Further southwest near the Thar border lies Barmer, a rugged desert district known for uncommercialized wooden carvings, intricate Kashidakari mirror-work embroidery, and authentic clay pottery made by desert artisans.',
+          'Just 35 km from Barmer town stand the mysterious Kiradu Temples, a cluster of five 11th-century Solanki-style stone temples celebrated for their sensuous figurines, friezes of horses and elephants, and serene desert isolation.'
+        ],
+        inlineImage: {
+          url: destinationImages.barmerHeritage.url,
+          alt: destinationImages.barmerHeritage.alt,
+          caption: destinationImages.barmerHeritage.caption,
+          photographer: destinationImages.barmerHeritage.photographer,
+          sourceUrl: destinationImages.barmerHeritage.sourcePage
+        }
       }
     ],
     practicalTravelGuide: {
       bestTimeToVisit: 'October to March offers cool, pleasant exploring weather.',
-      idealDuration: 'Incorporate 1 to 2 days for Bundi or Shekhawati as a midway stopover on broader itineraries.',
+      idealDuration: 'Incorporate 1 to 2 days for Bundi, Osian, or Barmer as a midway stopover on broader itineraries.',
       approxBudgetCategory: 'Budget',
       essentialItemsToPack: [
         'Small cash bills in Indian Rupees (ATMs and card machines can be sparse in rural areas)',
-        'Flashlight or headlamp for exploring unlit stepwells and haveli cellars',
+        'Flashlight or headlamp for exploring unlit stepwells and temple cellars',
         'Pocket guide to Indian mythological symbolism'
       ],
-      topAdvice: 'In Shekhawati, seek out haveli chaukidars (caretakers); a courteous tip of ₹50–₹100 will usually unlock breathtaking private inner courtyards closed to the public.'
+      topAdvice: 'In Bundi, visit Raniji Ki Baori early in the morning when the light cascades down the hundred stone steps, illuminating the elephant-headed stone corbels.'
     },
-    conclusion: 'Stepping off the well-trodden tourist highway into towns like Bundi, Mandawa, and Osian reveals Rajasthan’s quieter, more contemplative soul. These hidden gems reward travelers with unfiltered authenticity and timeless historic beauty.',
+    conclusion: 'Stepping off the well-trodden tourist highway into towns like Bundi, Osian, and Barmer reveals Rajasthan’s quieter, more contemplative soul. These hidden gems reward travelers with unfiltered authenticity and timeless historic beauty.',
     sourcesAndReferences: [
       'Archaeological Survey of India (ASI) Bundi Circle Monographs',
       'The Painted Houses of Western India by Francis Wacziarg & Aman Nath',
-      'INTACH Shekhawati Architectural Conservation Reports'
+      'INTACH Architectural Conservation Reports: Osian & Kiradu'
     ],
     relatedSlugs: ['top-10-places-jaipur-guide', 'royal-rajasthan-road-trip-itinerary', 'best-time-to-visit-rajasthan-weather-festivals']
   },
@@ -699,11 +780,11 @@ export const blogsData: BlogArticle[] = [
     readingTime: '9 min read',
     wordCount: 865,
     featuredImage: {
-      url: 'https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Heritage marble pavilions and courtyard reflecting royal living',
-      caption: 'Rajasthan caters to every pocket, from cozy backpacker havelis to opulent converted royal palaces.',
-      photographer: 'Varun Gaba',
-      sourceUrl: 'https://unsplash.com'
+      url: destinationImages.jaipurCityPalace.url,
+      alt: destinationImages.jaipurCityPalace.alt,
+      caption: destinationImages.jaipurCityPalace.caption,
+      photographer: destinationImages.jaipurCityPalace.photographer,
+      sourceUrl: destinationImages.jaipurCityPalace.sourcePage
     },
     author: {
       name: 'Rohan Meena',
@@ -733,7 +814,14 @@ export const blogsData: BlogArticle[] = [
         paragraphs: [
           'Transportation: Indian Railways remains the most economical and scenic way to navigate between major hubs. A comfortable 3rd AC train ticket between Jaipur and Jodhpur costs approximately ₹650–₹850. For local intra-city travel, ride-hailing apps like Uber and Ola operate reliably in Jaipur, Jodhpur, and Udaipur, preventing fare disputes with street rickshaws.',
           'Monument Admissions: Entry fees represent a notable cost factor for foreign travelers. While Indian citizens pay ₹40–₹100 per fort, foreign tourist tickets range from ₹250 to ₹650 per major monument. As noted in our Jaipur guide, always look for Archaeological Survey of India (ASI) and State Tourism composite passes to cut entry costs by up to 40%.'
-        ]
+        ],
+        inlineImage: {
+          url: destinationImages.jodhpurJaswantThada.url,
+          alt: destinationImages.jodhpurJaswantThada.alt,
+          caption: destinationImages.jodhpurJaswantThada.caption,
+          photographer: destinationImages.jodhpurJaswantThada.photographer,
+          sourceUrl: destinationImages.jodhpurJaswantThada.sourcePage
+        }
       },
       {
         heading: '3. Actionable Money-Saving Tips for Smart Travelers',

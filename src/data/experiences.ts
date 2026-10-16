@@ -1,4 +1,5 @@
 import { TravelExperience } from '../types';
+import { destinationImages } from './destinationImages';
 
 export const travelExperiences: TravelExperience[] = [
   {
@@ -10,11 +11,11 @@ export const travelExperiences: TravelExperience[] = [
     duration: 'Overnight Experience',
     description: 'Ride across sweeping wind-sculpted sand dunes on camelback as the sunset paints the sky in shades of saffron. Spend the evening around a crackling bonfire listening to soulful Manganiyar folk singers, followed by a night under an unpolluted canopy of desert stars.',
     image: {
-      url: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80',
-      alt: 'Thar Desert sand dunes at sunset with camel caravans',
-      caption: 'Golden sand ripples at Thar Desert during twilight.',
-      photographer: 'Jeremy Bishop',
-      sourceUrl: 'https://unsplash.com'
+      url: destinationImages.jaisalmerSamDunes.url,
+      alt: destinationImages.jaisalmerSamDunes.alt,
+      caption: destinationImages.jaisalmerSamDunes.caption,
+      photographer: destinationImages.jaisalmerSamDunes.photographer,
+      sourceUrl: destinationImages.jaisalmerSamDunes.sourcePage
     }
   },
   {
@@ -26,11 +27,11 @@ export const travelExperiences: TravelExperience[] = [
     duration: '1.5 Hours',
     description: 'Glide gently across the calm mirror waters of Lake Pichola at golden hour. Float past the marble facade of the City Palace, gaze upon the floating Taj Lake Palace, and disembark at the 17th-century island sanctuary of Jag Mandir for tea.',
     image: {
-      url: 'https://images.unsplash.com/photo-1615836245337-f5b9b2303f10?auto=format&fit=crop&w=800&q=80',
-      alt: 'Sunset reflections over Lake Pichola with historic palaces',
-      caption: 'Sunset hues reflecting over Lake Pichola and the Aravalis.',
-      photographer: 'Fardeen Khaleel',
-      sourceUrl: 'https://unsplash.com'
+      url: destinationImages.udaipurLakePichola.url,
+      alt: destinationImages.udaipurLakePichola.alt,
+      caption: destinationImages.udaipurLakePichola.caption,
+      photographer: destinationImages.udaipurLakePichola.photographer,
+      sourceUrl: destinationImages.udaipurLakePichola.sourcePage
     }
   },
   {
@@ -42,11 +43,11 @@ export const travelExperiences: TravelExperience[] = [
     duration: '3.5 Hours',
     description: 'Venture into the dense dry deciduous forests and ancient stone ruins in an open 4x4 safari gypsy. Track the legendary Bengal Tigers alongside leopards, marsh crocodiles, and sambar deer in their natural sanctuary.',
     image: {
-      url: 'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=800&q=80',
-      alt: 'Royal Bengal tiger moving through forest canopy',
-      caption: 'Royal Bengal Tiger prowling through Ranthambore reserve.',
-      photographer: 'David Clode',
-      sourceUrl: 'https://unsplash.com'
+      url: destinationImages.ranthamboreWildlife.url,
+      alt: destinationImages.ranthamboreWildlife.alt,
+      caption: destinationImages.ranthamboreWildlife.caption,
+      photographer: destinationImages.ranthamboreWildlife.photographer,
+      sourceUrl: destinationImages.ranthamboreWildlife.sourcePage
     }
   },
   {
@@ -58,11 +59,11 @@ export const travelExperiences: TravelExperience[] = [
     duration: '2 Hours (6 Zip Wires)',
     description: 'Soar through the skies on a circuit of six high-velocity zip wires suspended over fort moats, desert lakes, and the colossal 500-year-old defensive walls of Mehrangarh, with unmatched views of the Blue City below.',
     image: {
-      url: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80',
-      alt: 'Mehrangarh Fort ramparts in Jodhpur',
-      caption: 'The dramatic cliffs and moats surrounding Mehrangarh Fort.',
-      photographer: 'Naveed Ahmed',
-      sourceUrl: 'https://unsplash.com'
+      url: destinationImages.jodhpurMehrangarh.url,
+      alt: destinationImages.jodhpurMehrangarh.alt,
+      caption: destinationImages.jodhpurMehrangarh.caption,
+      photographer: destinationImages.jodhpurMehrangarh.photographer,
+      sourceUrl: destinationImages.jodhpurMehrangarh.sourcePage
     }
   },
   {
@@ -75,7 +76,7 @@ export const travelExperiences: TravelExperience[] = [
     description: 'Savor an unlimited feast of authentic Dal Baati Churma, Ker Sangri, and Gatte Ki Sabzi served in traditional kansa bronze plates, accompanied by fire-eating folk dancers, puppet theater, and traditional pottery demonstrations.',
     image: {
       url: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80',
-      alt: 'Traditional Indian thali with numerous bowls and breads',
+      alt: 'Traditional authentic Rajasthani thali feast with lentils and ghee flatbreads',
       caption: 'Lavish traditional thali meal prepared with pure desi ghee.',
       photographer: 'Anil Sharma',
       sourceUrl: 'https://unsplash.com'
@@ -90,11 +91,11 @@ export const travelExperiences: TravelExperience[] = [
     duration: '1.5 Hours',
     description: 'Witness the evening Maha Aarti at Pushkar Lake as temple bells chime in unison, camphor flames flicker against the water, and pilgrims gently float earthen oil lamps (diyas) onto the sacred waters under the dusk sky.',
     image: {
-      url: 'https://images.unsplash.com/photo-1566833925252-70b5534c0e6e?auto=format&fit=crop&w=800&q=80',
-      alt: 'Pushkar Lake with temple ghats and quiet reflections',
-      caption: 'Spiritual tranquility along the 52 sacred ghats of Pushkar.',
-      photographer: 'Abhishek Prasad',
-      sourceUrl: 'https://unsplash.com'
+      url: destinationImages.pushkarLake.url,
+      alt: destinationImages.pushkarLake.alt,
+      caption: destinationImages.pushkarLake.caption,
+      photographer: destinationImages.pushkarLake.photographer,
+      sourceUrl: destinationImages.pushkarLake.sourcePage
     }
   }
 ];

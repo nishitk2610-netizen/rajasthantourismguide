@@ -1,4 +1,5 @@
 import { Destination } from '../types';
+import { destinationImages } from './destinationImages';
 
 export const destinationsData: Destination[] = [
   {
@@ -9,26 +10,33 @@ export const destinationsData: Destination[] = [
     shortDescription: 'The royal capital of Rajasthan, celebrated for its terracotta-pink facades, astronomy observatories, and hill-cresting Mughal-Rajput citadels.',
     fullOverview: 'Founded in 1727 by Maharaja Sawai Jai Singh II, Jaipur is India’s first planned city and a UNESCO World Heritage Site. Painted terracotta-pink in 1876 to welcome the Prince of Wales, the city seamlessly merges 18th-century grid architecture with bustling bazaars, hilltop fortresses, and opulent living royal palaces.',
     image: {
-      url: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Hawa Mahal Palace of Winds in Jaipur, Rajasthan',
-      caption: 'The iconic honeycomb facade of Hawa Mahal (Palace of Winds) bathed in morning golden light.',
-      photographer: 'Annie Spratt',
-      sourceUrl: 'https://unsplash.com/photos/hawa-mahal-jaipur-india'
+      url: destinationImages.jaipurHawaMahal.url,
+      alt: destinationImages.jaipurHawaMahal.alt,
+      caption: destinationImages.jaipurHawaMahal.caption,
+      photographer: destinationImages.jaipurHawaMahal.photographer,
+      sourceUrl: destinationImages.jaipurHawaMahal.sourcePage
     },
     gallery: [
       {
-        url: 'https://images.unsplash.com/photo-1603288967758-a9fa432d8816?auto=format&fit=crop&w=1000&q=80',
-        alt: 'Amber Fort courtyard and ramparts overlooking Maota Lake',
-        caption: 'Amber Fort courtyard and defensive bastions above Maota Lake.',
-        photographer: 'Sylwia Bartyzel',
-        sourceUrl: 'https://unsplash.com'
+        url: destinationImages.jaipurAmberFort.url,
+        alt: destinationImages.jaipurAmberFort.alt,
+        caption: destinationImages.jaipurAmberFort.caption,
+        photographer: destinationImages.jaipurAmberFort.photographer,
+        sourceUrl: destinationImages.jaipurAmberFort.sourcePage
       },
       {
-        url: 'https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&w=1000&q=80',
-        alt: 'Intricate marble jali and archways at City Palace Jaipur',
-        caption: 'Intricate stone carved arches inside the City Palace complex.',
-        photographer: 'Prateek Katyal',
-        sourceUrl: 'https://unsplash.com'
+        url: destinationImages.jaipurCityPalace.url,
+        alt: destinationImages.jaipurCityPalace.alt,
+        caption: destinationImages.jaipurCityPalace.caption,
+        photographer: destinationImages.jaipurCityPalace.photographer,
+        sourceUrl: destinationImages.jaipurCityPalace.sourcePage
+      },
+      {
+        url: destinationImages.jaipurJantarMantar.url,
+        alt: destinationImages.jaipurJantarMantar.alt,
+        caption: destinationImages.jaipurJantarMantar.caption,
+        photographer: destinationImages.jaipurJantarMantar.photographer,
+        sourceUrl: destinationImages.jaipurJantarMantar.sourcePage
       }
     ],
     bestTimeToVisit: 'October to March (Pleasant daytime highs 22°C–28°C; crisp winter evenings)',
@@ -83,19 +91,26 @@ export const destinationsData: Destination[] = [
     shortDescription: 'Regarded as the Venice of the East, Udaipur is nestled around shimmering Lake Pichola with whitewashed palaces and serene Aravali hill backdrops.',
     fullOverview: 'Founded in 1559 by Maharana Udai Singh II as the historic capital of the Mewar Kingdom, Udaipur is famous for its interconnected freshwater lakes, romantic lakeside ghats, marble palaces, and deep Rajput martial pride.',
     image: {
-      url: 'https://images.unsplash.com/photo-1615836245337-f5b9b2303f10?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Lake Pichola with City Palace and Aravali mountains in Udaipur',
-      caption: 'Sunset reflection along the tranquil waters of Lake Pichola with the Mewar City Palace.',
-      photographer: 'Fardeen Khaleel',
-      sourceUrl: 'https://unsplash.com'
+      url: destinationImages.udaipurLakePichola.url,
+      alt: destinationImages.udaipurLakePichola.alt,
+      caption: destinationImages.udaipurLakePichola.caption,
+      photographer: destinationImages.udaipurLakePichola.photographer,
+      sourceUrl: destinationImages.udaipurLakePichola.sourcePage
     },
     gallery: [
       {
-        url: 'https://images.unsplash.com/photo-1591289009723-aef0a1a8a211?auto=format&fit=crop&w=1000&q=80',
-        alt: 'Intricate marble pavilions of City Palace overlooking Lake Pichola',
-        caption: 'Mewar royal architecture overlooking the tranquil lake.',
-        photographer: 'Sagar Dani',
-        sourceUrl: 'https://unsplash.com'
+        url: destinationImages.udaipurCityPalace.url,
+        alt: destinationImages.udaipurCityPalace.alt,
+        caption: destinationImages.udaipurCityPalace.caption,
+        photographer: destinationImages.udaipurCityPalace.photographer,
+        sourceUrl: destinationImages.udaipurCityPalace.sourcePage
+      },
+      {
+        url: destinationImages.udaipurJagMandir.url,
+        alt: destinationImages.udaipurJagMandir.alt,
+        caption: destinationImages.udaipurJagMandir.caption,
+        photographer: destinationImages.udaipurJagMandir.photographer,
+        sourceUrl: destinationImages.udaipurJagMandir.sourcePage
       }
     ],
     bestTimeToVisit: 'September to March (Crisp post-monsoon greenery and pleasant lake breezes)',
@@ -149,19 +164,26 @@ export const destinationsData: Destination[] = [
     shortDescription: 'Rising like a mirage from the Thar Desert, Jaisalmer is famous for its living yellow sandstone fort, grand merchant havelis, and undulating sand dunes.',
     fullOverview: 'Founded in 1156 AD by the Bhati Rajput ruler Rawal Jaisal, Jaisalmer prospered as a crucial caravan waypoint along the ancient Silk Route. Its signature yellow sandstone glows rich honey-gold at dawn and dusk. The crowning jewel is the Sonar Qila (Golden Fort), one of the very few living forts in the world where thousands still reside inside the ramparts.',
     image: {
-      url: 'https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Jaisalmer Fort illuminated at twilight with yellow sandstone walls',
-      caption: 'The majestic ramparts of Jaisalmer Fort (Sonar Qila) glowing golden under the desert twilight.',
-      photographer: 'Ibrahim Rifath',
-      sourceUrl: 'https://unsplash.com'
+      url: destinationImages.jaisalmerSonarQila.url,
+      alt: destinationImages.jaisalmerSonarQila.alt,
+      caption: destinationImages.jaisalmerSonarQila.caption,
+      photographer: destinationImages.jaisalmerSonarQila.photographer,
+      sourceUrl: destinationImages.jaisalmerSonarQila.sourcePage
     },
     gallery: [
       {
-        url: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1000&q=80',
-        alt: 'Undulating ripples of Sam Sand Dunes in Thar Desert',
-        caption: 'The pristine rippled ridges of Sam Sand Dunes during sundown.',
-        photographer: 'Jeremy Bishop',
-        sourceUrl: 'https://unsplash.com'
+        url: destinationImages.jaisalmerPatwonHaveli.url,
+        alt: destinationImages.jaisalmerPatwonHaveli.alt,
+        caption: destinationImages.jaisalmerPatwonHaveli.caption,
+        photographer: destinationImages.jaisalmerPatwonHaveli.photographer,
+        sourceUrl: destinationImages.jaisalmerPatwonHaveli.sourcePage
+      },
+      {
+        url: destinationImages.jaisalmerSamDunes.url,
+        alt: destinationImages.jaisalmerSamDunes.alt,
+        caption: destinationImages.jaisalmerSamDunes.caption,
+        photographer: destinationImages.jaisalmerSamDunes.photographer,
+        sourceUrl: destinationImages.jaisalmerSamDunes.sourcePage
       }
     ],
     bestTimeToVisit: 'October to March (Desert daytime around 24°C; night temps drop to 5°C–8°C)',
@@ -215,19 +237,26 @@ export const destinationsData: Destination[] = [
     shortDescription: 'Guarded by the mighty cliff-top Mehrangarh Fort, Jodhpur charms with its ocean of indigo-painted houses, spice markets, and Marwar heritage.',
     fullOverview: 'Founded in 1459 by Rao Jodha of the Rathore clan, Jodhpur is the gateway to the Thar Desert and the historic heart of the Marwar Kingdom. The city is celebrated for its deep indigo Brahmin quarter, the imposing Mehrangarh Fort that towers 400 feet above the skyline, and mouth-watering street savories.',
     image: {
-      url: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Blue houses of Jodhpur overlooked by Mehrangarh Fort',
-      caption: 'The sweeping sea of indigo blue houses nestled underneath the towering ramparts of Mehrangarh.',
-      photographer: 'Naveed Ahmed',
-      sourceUrl: 'https://unsplash.com'
+      url: destinationImages.jodhpurMehrangarh.url,
+      alt: destinationImages.jodhpurMehrangarh.alt,
+      caption: destinationImages.jodhpurMehrangarh.caption,
+      photographer: destinationImages.jodhpurMehrangarh.photographer,
+      sourceUrl: destinationImages.jodhpurMehrangarh.sourcePage
     },
     gallery: [
       {
-        url: 'https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1000&q=80',
-        alt: 'Intricate Rajput stone architecture and archway in Rajasthan',
-        caption: 'Ornate Marwar stone masonry and jharokha craftsmanship.',
-        photographer: 'Himanshu Dewangan',
-        sourceUrl: 'https://unsplash.com'
+        url: destinationImages.jodhpurJaswantThada.url,
+        alt: destinationImages.jodhpurJaswantThada.alt,
+        caption: destinationImages.jodhpurJaswantThada.caption,
+        photographer: destinationImages.jodhpurJaswantThada.photographer,
+        sourceUrl: destinationImages.jodhpurJaswantThada.sourcePage
+      },
+      {
+        url: destinationImages.jodhpurBlueCity.url,
+        alt: destinationImages.jodhpurBlueCity.alt,
+        caption: destinationImages.jodhpurBlueCity.caption,
+        photographer: destinationImages.jodhpurBlueCity.photographer,
+        sourceUrl: destinationImages.jodhpurBlueCity.sourcePage
       }
     ],
     bestTimeToVisit: 'October to March (Warm sunny days and cool refreshing desert nights)',
@@ -281,12 +310,21 @@ export const destinationsData: Destination[] = [
     shortDescription: 'A spiritual oasis situated on the banks of a sacred lake with 52 ghats, housing one of the few dedicated Lord Brahma temples in the world.',
     fullOverview: 'Revered as Tirth Raj (the King of Pilgrim Sites), Pushkar is steeped in mythology. Legend holds that Lord Brahma dropped a lotus petal here to create the holy Pushkar Lake. The town vibrates with spiritual chanting, incense, vegan cafes, bohemian markets, and the globally celebrated annual Pushkar Camel Fair.',
     image: {
-      url: 'https://images.unsplash.com/photo-1566833925252-70b5534c0e6e?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Pushkar Lake ghats and temple reflections during sunrise',
-      caption: 'The serene 52 ghats of sacred Pushkar Lake surrounded by ancient temples.',
-      photographer: 'Abhishek Prasad',
-      sourceUrl: 'https://unsplash.com'
+      url: destinationImages.pushkarLake.url,
+      alt: destinationImages.pushkarLake.alt,
+      caption: destinationImages.pushkarLake.caption,
+      photographer: destinationImages.pushkarLake.photographer,
+      sourceUrl: destinationImages.pushkarLake.sourcePage
     },
+    gallery: [
+      {
+        url: destinationImages.pushkarBrahmaTemple.url,
+        alt: destinationImages.pushkarBrahmaTemple.alt,
+        caption: destinationImages.pushkarBrahmaTemple.caption,
+        photographer: destinationImages.pushkarBrahmaTemple.photographer,
+        sourceUrl: destinationImages.pushkarBrahmaTemple.sourcePage
+      }
+    ],
     bestTimeToVisit: 'October to March (Special highlight during Kartik Purnima / Camel Fair in Nov)',
     recommendedDuration: '1 to 2 Days',
     idealFor: ['Spiritual Pilgrims', 'Photographers', 'Backpackers', 'Cultural Enthusiasts'],
@@ -338,12 +376,21 @@ export const destinationsData: Destination[] = [
     shortDescription: 'The solitary hill resort of Rajasthan, perched at 1,220 meters amidst cool Aravali pine forests, scenic Nakki Lake, and the Dilwara Jain Temples.',
     fullOverview: 'Mount Abu is Rajasthan’s only hill station, providing cool respite from desert heat since the era of the British Raj and Rajput kings. It is universally celebrated for the world-renowned 11th-to-13th century Dilwara Temples, carved with marble precision rivaling lace, as well as panoramic mountain viewpoints.',
     image: {
-      url: 'https://images.unsplash.com/photo-1626014303757-6466336e4f3a?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Nakki Lake and surrounding Aravali hills in Mount Abu',
-      caption: 'The scenic waters of Nakki Lake nestled amidst the lush granite peaks of Mount Abu.',
-      photographer: 'Hardik Joshi',
-      sourceUrl: 'https://unsplash.com'
+      url: destinationImages.mountAbuNakkiLake.url,
+      alt: destinationImages.mountAbuNakkiLake.alt,
+      caption: destinationImages.mountAbuNakkiLake.caption,
+      photographer: destinationImages.mountAbuNakkiLake.photographer,
+      sourceUrl: destinationImages.mountAbuNakkiLake.sourcePage
     },
+    gallery: [
+      {
+        url: destinationImages.mountAbuDilwara.url,
+        alt: destinationImages.mountAbuDilwara.alt,
+        caption: destinationImages.mountAbuDilwara.caption,
+        photographer: destinationImages.mountAbuDilwara.photographer,
+        sourceUrl: destinationImages.mountAbuDilwara.sourcePage
+      }
+    ],
     bestTimeToVisit: 'Throughout the year; October to March for cool weather, July to September for misty monsoon greenery',
     recommendedDuration: '2 Days',
     idealFor: ['Nature Lovers', 'Couples', 'Architectural Pilgrims', 'Trekking Enthusiasts'],
@@ -395,11 +442,11 @@ export const destinationsData: Destination[] = [
     shortDescription: 'Famed for its unvanquished Junagarh Fort, ancient merchant havelis, camel research sanctuary, and world-renowned bhujia and sweets.',
     fullOverview: 'Founded in 1488 by Rao Bika, a Rathore prince, Bikaner is a quintessential desert oasis renowned for its red sandstone palaces, unbroken defensive fortresses, and vibrant culinary traditions. Unlike many other forts in Rajasthan built atop hills, Junagarh Fort is uniquely built on the desert plains yet was never conquered.',
     image: {
-      url: 'https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Junagarh Fort red sandstone courtyard in Bikaner',
-      caption: 'Ornate red sandstone jharokhas inside the impenetrable Junagarh Fort complex.',
-      photographer: 'Himanshu Dewangan',
-      sourceUrl: 'https://unsplash.com'
+      url: destinationImages.bikanerJunagarh.url,
+      alt: destinationImages.bikanerJunagarh.alt,
+      caption: destinationImages.bikanerJunagarh.caption,
+      photographer: destinationImages.bikanerJunagarh.photographer,
+      sourceUrl: destinationImages.bikanerJunagarh.sourcePage
     },
     bestTimeToVisit: 'October to March (Ideal for exploring fortresses and the January Camel Festival)',
     recommendedDuration: '2 Days',
@@ -452,11 +499,11 @@ export const destinationsData: Destination[] = [
     shortDescription: 'The epicenter of Mewar courage, sacrifice, and romance, crowned by India’s largest fort complex perched high above the Gambhiri River plains.',
     fullOverview: 'Chittorgarh embodies the heroic spirit of the Rajputs. Spread across a 700-acre hill site, the fort witnessed three legendary sieges and the supreme sacrifices of Jauhar led by Rani Padmini and Rani Karnavati. The sprawling fortress contains 65 historic structures including grand palaces, nine temples, and victory towers.',
     image: {
-      url: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Chittorgarh Fort Vijay Stambha Victory Tower rising above ancient ruins',
-      caption: 'The magnificent nine-story Vijay Stambha (Tower of Victory) within Chittorgarh Fort.',
-      photographer: 'Deepesh Shrestha',
-      sourceUrl: 'https://unsplash.com'
+      url: destinationImages.chittorgarhFort.url,
+      alt: destinationImages.chittorgarhFort.alt,
+      caption: destinationImages.chittorgarhFort.caption,
+      photographer: destinationImages.chittorgarhFort.photographer,
+      sourceUrl: destinationImages.chittorgarhFort.sourcePage
     },
     bestTimeToVisit: 'September to March (Winter months are ideal for walking across the extensive fort grounds)',
     recommendedDuration: '1 to 2 Days',
@@ -509,12 +556,21 @@ export const destinationsData: Destination[] = [
     shortDescription: 'One of northern India’s finest tiger reserves, where royal Bengal tigers roam among the atmospheric ruins of ancient stone pavilions and lakeside palaces.',
     fullOverview: 'Located where the Aravali and Vindhya ranges converge in Sawai Madhopur, Ranthambore National Park is famous across the globe for diurnal tiger sightings. Royal Bengal tigers frequently stroll past 1,000-year-old fort ramparts, banyan trees, and lotus-choked lakes like Padam Talao.',
     image: {
-      url: 'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Royal Bengal Tiger in forest wilderness in Ranthambore',
-      caption: 'A majestic Bengal Tiger prowling through the dry deciduous forest of Ranthambore.',
-      photographer: 'David Clode',
-      sourceUrl: 'https://unsplash.com'
+      url: destinationImages.ranthamboreWildlife.url,
+      alt: destinationImages.ranthamboreWildlife.alt,
+      caption: destinationImages.ranthamboreWildlife.caption,
+      photographer: destinationImages.ranthamboreWildlife.photographer,
+      sourceUrl: destinationImages.ranthamboreWildlife.sourcePage
     },
+    gallery: [
+      {
+        url: destinationImages.ranthamboreFort.url,
+        alt: destinationImages.ranthamboreFort.alt,
+        caption: destinationImages.ranthamboreFort.caption,
+        photographer: destinationImages.ranthamboreFort.photographer,
+        sourceUrl: destinationImages.ranthamboreFort.sourcePage
+      }
+    ],
     bestTimeToVisit: 'October to June (Park closed July–September for monsoon); best tiger sightings March–May',
     recommendedDuration: '2 to 3 Days (Book at least 3–4 safaris to maximize sighting chances)',
     idealFor: ['Wildlife Photographers', 'Nature Enthusiasts', 'Adventure Travelers', 'Birdwatchers'],
@@ -566,12 +622,21 @@ export const destinationsData: Destination[] = [
     shortDescription: 'A revered pilgrimage center crowned by the Sufi shrine of Khwaja Moinuddin Chishti, the historic Taragarh Fort, and peaceful Ana Sagar Lake.',
     fullOverview: 'Founded in the 7th century AD by Raja Ajaypal Chauhan, Ajmer is a focal point of communal harmony and deep spiritual devotion. Nestled in a valley enclosed by the Aravali hills, it draws millions of pilgrims of all faiths to the world-renowned Ajmer Sharif Dargah, alongside magnificent Mughal pavilions and Indo-Islamic monuments.',
     image: {
-      url: 'https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Heritage marble dome and arches of historic monuments near Ajmer',
-      caption: 'The historical marble pavilions along the embankment of Ana Sagar Lake.',
-      photographer: 'Varun Gaba',
-      sourceUrl: 'https://unsplash.com'
+      url: destinationImages.ajmerDargah.url,
+      alt: destinationImages.ajmerDargah.alt,
+      caption: destinationImages.ajmerDargah.caption,
+      photographer: destinationImages.ajmerDargah.photographer,
+      sourceUrl: destinationImages.ajmerDargah.sourcePage
     },
+    gallery: [
+      {
+        url: destinationImages.ajmerAnaSagar.url,
+        alt: destinationImages.ajmerAnaSagar.alt,
+        caption: destinationImages.ajmerAnaSagar.caption,
+        photographer: destinationImages.ajmerAnaSagar.photographer,
+        sourceUrl: destinationImages.ajmerAnaSagar.sourcePage
+      }
+    ],
     bestTimeToVisit: 'October to March (Comfortable walking weather and vibrant festive ambiance)',
     recommendedDuration: '1 to 2 Days',
     idealFor: ['Spiritual Pilgrims', 'Sufi Devotees', 'History Buffs', 'Heritage Walkers'],
