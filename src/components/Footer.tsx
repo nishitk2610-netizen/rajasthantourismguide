@@ -138,6 +138,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </li>
               <li>
                 <button
+                  onClick={() => onNavigate('faq')}
+                  className="hover:text-amber-400 transition-colors cursor-pointer"
+                >
+                  Tourism FAQ Hub (20+ Q&As)
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => onNavigate('about')}
                   className="hover:text-amber-400 transition-colors cursor-pointer"
                 >
@@ -149,7 +157,15 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   onClick={() => onNavigate('contact')}
                   className="hover:text-amber-400 transition-colors cursor-pointer"
                 >
-                  Contact & Tourism FAQ
+                  Contact & Tourist Centers
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('privacy-policy')}
+                  className="hover:text-amber-400 transition-colors cursor-pointer text-amber-300/80"
+                >
+                  Privacy Policy & Ethics
                 </button>
               </li>
             </ul>
@@ -236,8 +252,22 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         {/* Ethical Disclaimer & Copyright */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#9E8E80]">
           <div className="space-y-1 text-center md:text-left">
-            <p>
-              &copy; {new Date().getFullYear()} Explore Rajasthan. All rights reserved.
+            <p className="flex items-center justify-center md:justify-start gap-3 flex-wrap">
+              <span>&copy; {new Date().getFullYear()} Explore Rajasthan. All rights reserved.</span>
+              <span>•</span>
+              <button
+                onClick={() => onNavigate('privacy-policy')}
+                className="text-amber-400 hover:underline cursor-pointer"
+              >
+                Privacy Policy & Cookie Ethics
+              </button>
+              <span>•</span>
+              <button
+                onClick={() => onNavigate('faq')}
+                className="text-amber-400 hover:underline cursor-pointer"
+              >
+                Tourism FAQ
+              </button>
             </p>
             <p className="text-[11px] text-[#827266] max-w-2xl">
               <span className="font-semibold text-amber-500/90">Disclaimer:</span> Explore Rajasthan is an independent educational and cultural travel information resource created for travel enthusiasts and digital marketing studies. We do not claim official government affiliation or representation of the Rajasthan Tourism Development Corporation (RTDC). All imagery is authentic, non-AI photography attributed to verified real photographers via Unsplash.

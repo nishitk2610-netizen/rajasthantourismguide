@@ -14,6 +14,10 @@ import {
   Sparkles
 } from 'lucide-react';
 import { travelTipsData } from '../data/tips';
+import { SEOHead } from '../components/SEOHead';
+import { Breadcrumbs } from '../components/Breadcrumbs';
+import { AEOSection } from '../components/AEOSection';
+import { seoDataMap } from '../data/seoData';
 
 const iconMap: Record<string, React.FC<{ className?: string }>> = {
   Sun,
@@ -25,7 +29,11 @@ const iconMap: Record<string, React.FC<{ className?: string }>> = {
   Camera
 };
 
-export const TravelTipsPage: React.FC = () => {
+interface TravelTipsPageProps {
+  onNavigate?: (page: string) => void;
+}
+
+export const TravelTipsPage: React.FC<TravelTipsPageProps> = ({ onNavigate }) => {
   const [activeTab, setActiveTab] = useState(travelTipsData[0].id);
 
   const selectedTip = travelTipsData.find((t) => t.id === activeTab) || travelTipsData[0];
@@ -33,6 +41,20 @@ export const TravelTipsPage: React.FC = () => {
 
   return (
     <div className="pt-24 pb-20 space-y-12">
+      <SEOHead
+        title={seoDataMap.tips.title}
+        description={seoDataMap.tips.metaDescription}
+        canonicalPath="/travel-tips"
+      />
+
+      {/* Breadcrumbs Navigation */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Breadcrumbs
+          items={[{ label: 'Travel Tips', isCurrent: true }]}
+          onNavigate={(page) => onNavigate && onNavigate(page)}
+        />
+      </div>
+
       {/* Header Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-[#2D1B13] text-white rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-xl border border-amber-900/40">
@@ -58,82 +80,69 @@ export const TravelTipsPage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left Navigation Buttons */}
           <div className="lg:col-span-4 space-y-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#881337] block mb-2 px-1">
-              Travel Categories
-            </span>
-            <div className="space-y-1.5 bg-white p-3 rounded-2xl border border-[#E7D6C3] shadow-sm">
+            <div className="p-4 bg-white rounded-2xl border border-[#E7D6C3] shadow-sm mb-4">
+              <h2 className="font-royal-title text-sm font-bold text-[#881337] uppercase tracking-wider mb-1">
+                7 Essential Travel Dimensions
+              </h2>
+              <p className="text-xs text-[#7A6759]">
+                Select a category to view actionable dos, don'ts, and local advice.
+              </p>
+            </div>
+
+            <div className="space-y-1.5">
               {travelTipsData.map((tip) => {
                 const ItemIcon = iconMap[tip.iconName] || Compass;
-                const isActive = activeTab === tip.id;
+                const isActive = tip.id === activeTab;
                 return (
                   <button
                     key={tip.id}
                     onClick={() => setActiveTab(tip.id)}
-                    className={`w-full flex items-center gap-3 p-3 rounded-xl text-xs sm:text-sm font-semibold transition-all text-left cursor-pointer ${
+                    className={`w-full p-4 rounded-xl text-left transition-all flex items-center justify-between cursor-pointer border ${
                       isActive
-                        ? 'bg-[#881337] text-white shadow-sm'
-                        : 'text-[#4A3B32] hover:bg-[#F5ECE0]'
+                        ? 'bg-gradient-to-r from-[#881337] to-[#B45309] text-white shadow-md border-transparent'
+                        : 'bg-white text-[#291A14] hover:bg-[#FAF4ED] border-[#E8DEC8]'
                     }`}
                   >
-                    <ItemIcon className={`w-4 h-4 shrink-0 ${isActive ? 'text-amber-300' : 'text-[#B45309]'}`} />
-                    <span className="truncate">{tip.title}</span>
+                    <div className="flex items-center gap-3">
+                      <div
+                        className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${
+                          isActive ? 'bg-white/20 text-white' : 'bg-[#F5ECE0] text-[#881337]'
+                        }`}
+                      >
+                        <ItemIcon className="w-4 h-4" />
+                      </div>
+                      <span className="font-semibold text-xs sm:text-sm line-clamp-1">
+                        {tip.title}
+                      </span>
+                    </div>
                   </button>
                 );
               })}
             </div>
-
-            {/* Quick Emergency Assistance Box */}
-            <div className="p-4 rounded-2xl bg-[#F7EFE4] border border-[#E2D2BC] text-xs space-y-2 text-[#4A392D] mt-4">
-              <strong className="block text-[#881337] font-bold text-sm">
-                Emergency Contact Numbers
-              </strong>
-              <div className="space-y-1 text-[11px]">
-                <p><strong>National Police Helpline:</strong> 112</p>
-                <p><strong>Tourist Helpline (Govt of India):</strong> 1363 (Toll Free, Multi-language)</p>
-                <p><strong>Medical Emergency / Ambulance:</strong> 108</p>
-              </div>
-            </div>
           </div>
 
-          {/* Right Active Content Panel */}
-          <div className="lg:col-span-8 bg-white p-6 sm:p-8 rounded-3xl border border-[#E7D6C3] shadow-sm space-y-6">
-            <div className="flex items-center gap-3 pb-4 border-b border-[#F0E4D5]">
-              <div className="w-10 h-10 rounded-xl bg-[#881337] text-white flex items-center justify-center">
-                <IconComponent className="w-5 h-5 text-amber-300" />
+          {/* Right Detailed Tip View */}
+          <div className="lg:col-span-8 bg-white p-6 sm:p-10 rounded-3xl border border-[#E7D6C3] shadow-sm space-y-8">
+            <div className="border-b border-[#F0E4D5] pb-6 space-y-3">
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#B45309]">
+                <IconComponent className="w-4 h-4" />
+                <span>Verified Field Advice</span>
               </div>
-              <div>
-                <h2 className="font-royal-title text-xl sm:text-2xl font-bold text-[#241A17]">
-                  {selectedTip.title}
-                </h2>
-                <p className="text-xs text-[#7A6759]">{selectedTip.summary}</p>
-              </div>
+              <h2 className="font-royal-title text-2xl sm:text-3xl font-bold text-[#241A17]">
+                {selectedTip.title}
+              </h2>
+              <p className="text-sm sm:text-base text-[#4D3A2F] leading-relaxed">
+                {selectedTip.summary}
+              </p>
             </div>
 
-            {/* Key Information Points */}
-            <div className="space-y-3">
-              <h3 className="text-sm font-bold uppercase tracking-wider text-[#B45309]">
-                Critical Travel Insights
-              </h3>
-              <div className="space-y-2.5">
-                {selectedTip.keyPoints.map((point, idx) => (
-                  <div
-                    key={idx}
-                    className="p-3.5 rounded-xl bg-[#FCF9F2] border border-[#EADBCC] text-xs sm:text-sm text-[#3E2D24] leading-relaxed flex items-start gap-2.5"
-                  >
-                    <Sparkles className="w-4 h-4 text-[#B45309] shrink-0 mt-0.5" />
-                    <span>{point}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Dos and Don'ts Comparison Columns */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+            {/* Dos and Don'ts Split Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Do List */}
               <div className="p-5 rounded-2xl bg-emerald-50/60 border border-emerald-200 space-y-3">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-emerald-800 flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                  Recommended Dos
+                  Recommended Practices (Dos)
                 </h4>
                 <ul className="space-y-2 text-xs text-emerald-950 leading-relaxed">
                   {selectedTip.dos.map((item, idx) => (
@@ -163,6 +172,15 @@ export const TravelTipsPage: React.FC = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* AEO Section for Travel Tips */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <AEOSection
+          title="Direct Practical Answers: Weather & Etiquette"
+          subtitle="Direct answers to critical questions about dressing, packing, and visiting seasons"
+          qaPairs={seoDataMap.tips.qaPairs}
+        />
       </section>
     </div>
   );

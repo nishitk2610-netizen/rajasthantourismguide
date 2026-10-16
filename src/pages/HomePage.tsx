@@ -6,6 +6,9 @@ import { travelExperiences } from '../data/experiences';
 import { DestinationCard } from '../components/DestinationCard';
 import { BlogCard } from '../components/BlogCard';
 import { ImageWithFallback } from '../components/ImageWithFallback';
+import { SEOHead } from '../components/SEOHead';
+import { AEOSection } from '../components/AEOSection';
+import { seoDataMap } from '../data/seoData';
 import { Destination, BlogArticle } from '../types';
 
 interface HomePageProps {
@@ -24,6 +27,11 @@ export const HomePage: React.FC<HomePageProps> = ({
 
   return (
     <div className="space-y-16 sm:space-y-24">
+      <SEOHead
+        title={seoDataMap.home.title}
+        description={seoDataMap.home.metaDescription}
+        canonicalPath="/"
+      />
       {/* HERO SECTION */}
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         {/* Real High-Resolution Background Photograph */}
@@ -349,6 +357,15 @@ export const HomePage: React.FC<HomePageProps> = ({
             </button>
           </div>
         </div>
+      </section>
+
+      {/* AEO DIRECT ANSWERS & ESSENTIAL Q&A */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+        <AEOSection
+          title="Direct Rajasthan Travel Answers & High-Intent Q&A"
+          subtitle="Direct, authoritative summaries answering high-volume traveler queries about visiting Rajasthan"
+          qaPairs={seoDataMap.home.qaPairs}
+        />
       </section>
     </div>
   );

@@ -8,6 +8,8 @@ import { BlogDetailPage } from './pages/BlogDetailPage';
 import { TravelTipsPage } from './pages/TravelTipsPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
+import { FAQPage } from './pages/FAQPage';
+import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { DestinationModal } from './components/DestinationModal';
 import { SearchModal } from './components/SearchModal';
 import { SavedItineraryModal } from './components/SavedItineraryModal';
@@ -45,7 +47,7 @@ export default function App() {
           setSelectedDestination(found);
           setCurrentPage('destinations');
         }
-      } else if (['destinations', 'blogs', 'tips', 'about', 'contact'].includes(hash)) {
+      } else if (['destinations', 'blogs', 'tips', 'about', 'contact', 'faq', 'privacy-policy'].includes(hash)) {
         setCurrentPage(hash);
       }
     };
@@ -116,12 +118,14 @@ export default function App() {
           {currentPage === 'destinations' && (
             <DestinationsPage
               onSelectDestination={handleSelectDestination}
+              onNavigate={handleNavigate}
             />
           )}
 
           {currentPage === 'blogs' && (
             <BlogsPage
               onSelectBlog={handleSelectBlog}
+              onNavigate={handleNavigate}
             />
           )}
 
@@ -131,19 +135,32 @@ export default function App() {
                 blog={selectedBlog}
                 onBack={() => handleNavigate('blogs')}
                 onSelectBlog={handleSelectBlog}
+                onNavigate={handleNavigate}
               />
             ) : (
-              <BlogsPage onSelectBlog={handleSelectBlog} />
+              <BlogsPage onSelectBlog={handleSelectBlog} onNavigate={handleNavigate} />
             )
           )}
 
-          {currentPage === 'tips' && <TravelTipsPage />}
+          {currentPage === 'tips' && (
+            <TravelTipsPage onNavigate={handleNavigate} />
+          )}
 
           {currentPage === 'about' && (
             <AboutPage onNavigate={handleNavigate} />
           )}
 
-          {currentPage === 'contact' && <ContactPage />}
+          {currentPage === 'contact' && (
+            <ContactPage onNavigate={handleNavigate} />
+          )}
+
+          {currentPage === 'faq' && (
+            <FAQPage onNavigate={handleNavigate} />
+          )}
+
+          {currentPage === 'privacy-policy' && (
+            <PrivacyPolicyPage onNavigate={handleNavigate} />
+          )}
         </main>
 
         {/* Persistent Royal Footer */}

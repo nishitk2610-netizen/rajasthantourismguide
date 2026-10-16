@@ -35,6 +35,15 @@ export interface Destination {
     road: string;
   };
   insiderTip: string;
+  qaSection?: {
+    question: string;
+    answer: string;
+    additionalDetails?: string;
+  }[];
+  coordinates?: {
+    lat: number;
+    lng: number;
+  };
 }
 
 export type BlogCategory = 'City Guides' | 'Culture & Food' | 'Itineraries' | 'Budget & Planning' | 'Offbeat';
@@ -56,6 +65,9 @@ export interface BlogArticle {
   slug: string;
   title: string;
   metaDescription: string;
+  primaryKeyword?: string;
+  secondaryKeywords?: string[];
+  searchIntent?: 'Informational' | 'Navigational' | 'Transactional';
   category: BlogCategory;
   tags: string[];
   publishedDate: string;
@@ -76,6 +88,11 @@ export interface BlogArticle {
     essentialItemsToPack: string[];
     topAdvice: string;
   };
+  qaSection: {
+    question: string;
+    answer: string;
+    additionalDetails?: string;
+  }[];
   conclusion: string;
   sourcesAndReferences: string[];
   relatedSlugs: string[];

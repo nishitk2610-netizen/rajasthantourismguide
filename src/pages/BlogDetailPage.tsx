@@ -18,18 +18,23 @@ import {
 import { BlogArticle } from '../types';
 import { blogsData } from '../data/blogs';
 import { ImageWithFallback } from '../components/ImageWithFallback';
+import { SEOHead } from '../components/SEOHead';
+import { Breadcrumbs } from '../components/Breadcrumbs';
+import { AEOSection } from '../components/AEOSection';
 import { useItinerary } from '../context/ItineraryContext';
 
 interface BlogDetailPageProps {
   blog: BlogArticle;
   onBack: () => void;
   onSelectBlog: (blog: BlogArticle) => void;
+  onNavigate?: (page: string) => void;
 }
 
 export const BlogDetailPage: React.FC<BlogDetailPageProps> = ({
   blog,
   onBack,
-  onSelectBlog
+  onSelectBlog,
+  onNavigate
 }) => {
   const { isItemSaved, saveItem, removeItem } = useItinerary();
   const saved = isItemSaved(blog.id);
@@ -61,9 +66,65 @@ export const BlogDetailPage: React.FC<BlogDetailPageProps> = ({
     (b) => b.id !== blog.id && (blog.relatedSlugs.includes(b.slug) || b.category === blog.category)
   ).slice(0, 3);
 
+  // Article structured data schema
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: blog.title,
+    description: blog.metaDescription,
+    image: [blog.featuredImage.url],
+    datePublished: blog.publishedDate,
+    dateModified: blog.publishedDate,
+    author: {
+      '@type': 'Person',
+      name: blog.author.name,
+      jobTitle: blog.author.role
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Explore Rajasthan',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=400&q=80'
+      }
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://explore-rajasthan.guide/#blog/${blog.slug}`
+    },
+    keywords: blog.tags.join(', '),
+    articleSection: blog.category,
+    wordCount: blog.wordCount
+  };
+
   return (
     <article className="pt-24 pb-20 space-y-10">
-      {/* Top Navigation & Breadcrumbs Bar */}
+      <SEOHead
+        title={`${blog.title} | Explore Rajasthan`}
+        description={blog.metaDescription}
+        canonicalPath={`/blog/${blog.slug}`}
+        ogImage={blog.featuredImage.url}
+        schema={articleSchema}
+      />
+
+      {/* Breadcrumbs Navigation */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Breadcrumbs
+          items={[
+            { label: 'Travel Blogs', href: 'blogs' },
+            { label: blog.title, isCurrent: true }
+          ]}
+          onNavigate={(page) => {
+            if (page === 'blogs') {
+              onBack();
+            } else if (onNavigate) {
+              onNavigate(page);
+            }
+          }}
+        />
+      </div>
+
+      {/* Top Navigation & Share Bar */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-2 border-b border-[#E7D6C3] text-xs">
           <button
@@ -139,62 +200,80 @@ export const BlogDetailPage: React.FC<BlogDetailPageProps> = ({
             <p className="text-xs text-[#735A48]">{blog.author.role}</p>
           </div>
         </div>
+
+        {/* Real Featured Photograph */}
+        <div className="relative rounded-3xl overflow-hidden shadow-xl border border-[#E7D6C3] aspect-video">
+          <ImageWithFallback
+            src={blog.featuredImage.url}
+            alt={blog.featuredImage.alt}
+            photographer={blog.featuredImage.photographer}
+            sourceUrl={blog.featuredImage.sourceUrl}
+            caption={blog.featuredImage.caption}
+            showCreditBadge={true}
+            priority={true}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        {blog.featuredImage.caption && (
+          <p className="text-xs text-[#6B5749] italic border-l-2 border-[#B45309] pl-3 py-0.5">
+            {blog.featuredImage.caption} (Photo: {blog.featuredImage.photographer})
+          </p>
+        )}
       </header>
 
-      {/* Hero Featured Photograph */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl overflow-hidden shadow-xl border border-[#E7D6C3]">
-          <div className="relative h-80 sm:h-[450px] w-full">
-            <ImageWithFallback
-              src={blog.featuredImage.url}
-              alt={blog.featuredImage.alt}
-              photographer={blog.featuredImage.photographer}
-              caption={blog.featuredImage.caption}
-              showCreditBadge={true}
-              priority={true}
-              className="h-full w-full"
-            />
-          </div>
-          {blog.featuredImage.caption && (
-            <div className="p-3 bg-[#F5ECE0] text-xs text-[#6B5749] border-t border-[#E5D5C2] flex items-center justify-between">
-              <span>{blog.featuredImage.caption}</span>
-              <span className="text-[11px] font-medium text-[#B45309]">
-                Photo by {blog.featuredImage.photographer} via Unsplash
-              </span>
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* Main Editorial Content */}
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 text-[#362720]">
-        {/* Engaging Introduction */}
-        <div className="p-6 rounded-2xl bg-white border-l-4 border-[#881337] shadow-sm">
-          <p className="font-royal-serif text-lg sm:text-xl text-[#362720] leading-relaxed italic">
-            "{blog.introduction}"
-          </p>
+      {/* Main Article Body */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        {/* Table of Contents */}
+        <div className="p-5 rounded-2xl bg-[#F5ECE0] border border-[#EADBCC] text-xs space-y-2">
+          <span className="font-bold text-[#881337] uppercase tracking-wider block">
+            Table of Contents
+          </span>
+          <ul className="space-y-1.5 pl-4 list-decimal text-[#523F35]">
+            {blog.sections.map((sec, idx) => (
+              <li key={idx} className="hover:text-[#881337] transition-colors">
+                <a href={`#section-${idx}`} className="font-medium">
+                  {sec.heading}
+                </a>
+              </li>
+            ))}
+            <li>
+              <a href="#practical-guide" className="font-medium">
+                Practical Travel Planning Guide
+              </a>
+            </li>
+            <li>
+              <a href="#direct-qa" className="font-medium">
+                Verified Direct Answers & Q&A
+              </a>
+            </li>
+          </ul>
         </div>
 
-        {/* Body Sections */}
+        {/* Introduction */}
+        <section className="text-base sm:text-lg leading-relaxed text-[#3D2C23] font-serif border-b border-[#E7D6C3] pb-6">
+          <p>{blog.introduction}</p>
+        </section>
+
+        {/* Content Sections */}
         {blog.sections.map((section, idx) => (
-          <section key={idx} className="space-y-4">
-            <h2 className="font-royal-title text-xl sm:text-2xl font-bold text-[#881337] pt-4">
+          <section key={idx} id={`section-${idx}`} className="space-y-4 pt-4">
+            <h2 className="font-royal-title text-xl sm:text-2xl font-bold text-[#241A17] pt-2 border-l-4 border-[#881337] pl-3">
               {section.heading}
             </h2>
 
             {section.subheading && (
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-[#B45309]">
+              <h3 className="font-semibold text-sm sm:text-base text-[#881337] italic">
                 {section.subheading}
               </h3>
             )}
 
-            <div className="space-y-4 text-base leading-relaxed text-[#3D2C23]">
-              {section.paragraphs.map((para, pIdx) => (
-                <p key={pIdx}>{para}</p>
+            <div className="space-y-4 text-sm sm:text-base leading-relaxed text-[#3D2C23]">
+              {section.paragraphs.map((p, pIdx) => (
+                <p key={pIdx}>{p}</p>
               ))}
             </div>
 
-            {/* Inline Callout Box */}
+            {/* Optional Callout Box */}
             {section.calloutBox && (
               <div
                 className={`p-5 rounded-2xl my-4 text-sm leading-relaxed border ${
@@ -220,14 +299,14 @@ export const BlogDetailPage: React.FC<BlogDetailPageProps> = ({
             {/* Inline Image */}
             {section.inlineImage && (
               <div className="my-6 rounded-2xl overflow-hidden border border-[#E7D6C3] shadow-sm">
-                <div className="relative h-64 w-full">
+                <div className="relative h-64 sm:h-80 w-full">
                   <ImageWithFallback
                     src={section.inlineImage.url}
                     alt={section.inlineImage.alt}
                     photographer={section.inlineImage.photographer}
                     caption={section.inlineImage.caption}
                     showCreditBadge={true}
-                    className="h-full w-full"
+                    className="h-full w-full object-cover"
                   />
                 </div>
                 {section.inlineImage.caption && (
@@ -244,7 +323,7 @@ export const BlogDetailPage: React.FC<BlogDetailPageProps> = ({
         ))}
 
         {/* Practical Travel Guide Summary Box */}
-        <div className="p-6 sm:p-8 rounded-3xl bg-[#F7EFE4] border-2 border-[#E0CEB7] shadow-sm space-y-4">
+        <div id="practical-guide" className="p-6 sm:p-8 rounded-3xl bg-[#F7EFE4] border-2 border-[#E0CEB7] shadow-sm space-y-4">
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#881337]">
             <Compass className="w-4 h-4 text-[#B45309]" />
             Practical Travel Planning Summary
@@ -286,6 +365,17 @@ export const BlogDetailPage: React.FC<BlogDetailPageProps> = ({
             </ul>
           </div>
         </div>
+
+        {/* AEO DIRECT ANSWERS & Q&A FOR THIS ARTICLE */}
+        {blog.qaSection && blog.qaSection.length > 0 && (
+          <div id="direct-qa">
+            <AEOSection
+              title={`Direct Answers: ${blog.title}`}
+              subtitle="Quick, verified answers to top traveler questions addressed in this guide"
+              qaPairs={blog.qaSection}
+            />
+          </div>
+        )}
 
         {/* Conclusion */}
         <section className="space-y-3 pt-4 border-t border-[#E7D6C3]">
@@ -345,7 +435,7 @@ export const BlogDetailPage: React.FC<BlogDetailPageProps> = ({
                     src={rel.featuredImage.url}
                     alt={rel.featuredImage.alt}
                     photographer={rel.featuredImage.photographer}
-                    className="h-full w-full"
+                    className="h-full w-full object-cover"
                   />
                   <span className="absolute top-2 left-2 z-10 px-2 py-0.5 text-[10px] font-bold bg-[#881337] text-white rounded-full">
                     {rel.category}

@@ -1,14 +1,51 @@
 import React from 'react';
 import { Castle, Compass, Shield, Users, Camera, Heart, BookOpen, Award, CheckCircle2 } from 'lucide-react';
 import { ImageWithFallback } from '../components/ImageWithFallback';
+import { SEOHead } from '../components/SEOHead';
+import { Breadcrumbs } from '../components/Breadcrumbs';
+import { AEOSection } from '../components/AEOSection';
+import { seoDataMap } from '../data/seoData';
 
 interface AboutPageProps {
   onNavigate: (page: string) => void;
 }
 
 export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Explore Rajasthan',
+    url: 'https://explore-rajasthan.guide',
+    description: seoDataMap.about.metaDescription,
+    founder: {
+      '@type': 'Person',
+      name: 'Dr. Vikramaditya Singh'
+    },
+    knowsAbout: [
+      'Rajasthan Tourism',
+      'Rajput Architecture',
+      'Thar Desert Expeditions',
+      'UNESCO Hill Forts of Rajasthan'
+    ]
+  };
+
   return (
     <div className="pt-24 pb-20 space-y-16">
+      <SEOHead
+        title={seoDataMap.about.title}
+        description={seoDataMap.about.metaDescription}
+        canonicalPath="/about-us"
+        schema={organizationSchema}
+      />
+
+      {/* Breadcrumbs Navigation */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Breadcrumbs
+          items={[{ label: 'About Us', isCurrent: true }]}
+          onNavigate={(page) => onNavigate(page)}
+        />
+      </div>
+
       {/* Header Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-[#2D1B13] text-white rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-xl border border-amber-900/40">
@@ -70,9 +107,9 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
               <div className="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-[#E7D6C3]">
                 <Heart className="w-5 h-5 text-[#881337] shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="font-semibold text-xs sm:text-sm text-[#241A17]">Responsible & Ethical Tourism</h3>
+                  <h3 className="font-semibold text-xs sm:text-sm text-[#241A17]">Ethical & Responsible Tourism</h3>
                   <p className="text-xs text-[#6B5749]">
-                    We advocate for supporting local artisans, weavers, and heritage conservation directly while minimizing single-use plastic waste across Rajasthan’s delicate desert and forest habitats.
+                    We champion fair compensation for local guides, humane treatment of safari camels and elephants, conservation of wildlife corridors, and the protection of living havelis from commercial degradation.
                   </p>
                 </div>
               </div>
@@ -80,12 +117,12 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
           </div>
 
           {/* Visual Showcase */}
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-[#E7D6C3] h-[480px]">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3]">
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1591289009723-aef0a1a8a211?auto=format&fit=crop&w=1200&q=80"
-              alt="Udaipur City Palace overlooking Lake Pichola"
-              photographer="Sagar Dani"
-              caption="Mewar royal architecture overlooking Lake Pichola in Udaipur."
+              src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80"
+              alt="Intricate Rajasthani architecture of Hawa Mahal in Jaipur"
+              photographer="Annie Spratt"
+              caption="Our commitment: real, authentic imagery capturing genuine Rajasthan monuments."
               showCreditBadge={true}
               className="w-full h-full object-cover"
             />
@@ -93,30 +130,14 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* Important Transparency Disclaimer */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="p-6 sm:p-8 rounded-3xl bg-[#F7EFE4] border-2 border-[#E5D5C2] space-y-3">
-          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#881337]">
-            <Shield className="w-4 h-4 text-[#B45309]" />
-            Official Transparency & Non-Government Affiliation Disclaimer
-          </div>
-          <h3 className="font-royal-title text-lg sm:text-xl font-bold text-[#241A17]">
-            Independent Educational & Tourism Resource
-          </h3>
-          <p className="text-xs sm:text-sm text-[#5C483B] leading-relaxed">
-            <strong>Explore Rajasthan</strong> is an independent travel publication and digital educational showcase developed for tourism marketing and web technology studies. We do not claim official government affiliation, sponsorship, or status as the Rajasthan Tourism Development Corporation (RTDC) or Rajasthan Department of Tourism. For official government notifications, permit issuances, or state bookings, visitors are encouraged to consult official state portals.
-          </p>
-        </div>
-      </section>
-
-      {/* Editorial Contributors Team */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-        <div className="text-center space-y-2 max-w-xl mx-auto">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#B45309]">
-            THE VOICES BEHIND EXPLORE RAJASTHAN
+      {/* Editorial Team */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <div className="text-center space-y-2">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#881337]">
+            MEET THE RESEARCH COLLECTIVE
           </span>
           <h2 className="font-royal-title text-2xl sm:text-3xl font-bold text-[#241A17]">
-            Editorial Contributors & Field Researchers
+            Travel Historians & Field Guides
           </h2>
         </div>
 
@@ -166,6 +187,15 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
             </p>
           </div>
         </div>
+      </section>
+
+      {/* AEO Section for About Page */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <AEOSection
+          title="Editorial Mission & Standards Q&A"
+          subtitle="Answers about our publication, authentic photography pledge, and non-government status"
+          qaPairs={seoDataMap.about.qaPairs}
+        />
       </section>
     </div>
   );

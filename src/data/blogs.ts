@@ -6,12 +6,15 @@ export const blogsData: BlogArticle[] = [
     id: 'top-10-places-jaipur-guide',
     slug: 'top-10-places-jaipur-guide',
     title: 'Top 10 Places to Visit in Jaipur: A Complete Travel Guide',
-    metaDescription: 'Explore the top 10 attractions in Jaipur, Rajasthan. Discover Amber Fort, Hawa Mahal, City Palace, Jantar Mantar, vibrant bazaars, and insider travel tips.',
+    metaDescription: 'Explore top 10 attractions in Jaipur, Rajasthan: Amber Fort, Hawa Mahal, City Palace, Jantar Mantar, and Johari Bazaar with visiting hours and entry fees.',
+    primaryKeyword: 'places to visit in Jaipur',
+    secondaryKeywords: ['Jaipur travel guide', 'Hawa Mahal Palace of Winds', 'Amber Fort Sheesh Mahal'],
+    searchIntent: 'Informational',
     category: 'City Guides',
     tags: ['Jaipur', 'Pink City', 'Amber Fort', 'Hawa Mahal', 'Heritage Travel', 'Rajasthan Itinerary'],
     publishedDate: 'October 12, 2026',
     readingTime: '7 min read',
-    wordCount: 840,
+    wordCount: 860,
     featuredImage: {
       url: destinationImages.jaipurHawaMahal.url,
       alt: destinationImages.jaipurHawaMahal.alt,
@@ -83,6 +86,18 @@ export const blogsData: BlogArticle[] = [
       ],
       topAdvice: 'Begin your day early at 8:00 AM at Amber Fort to beat the tour bus crowds and photograph the golden light reflecting over Maota Lake.'
     },
+    qaSection: [
+      {
+        question: 'What are the top three must-visit places in Jaipur for a short weekend trip?',
+        answer: 'The three essential sights for a short visit are Amber Fort with its mirror-inlaid Sheesh Mahal, Hawa Mahal for its iconic honeycomb facade, and the City Palace complex housing royal museums. These three landmarks showcase Jaipur’s royal history, architectural ingenuity, and living Mewar-Mughal heritage in a single coordinated loop.',
+        additionalDetails: 'All three monuments are located within a convenient 11-kilometer corridor linked by auto-rickshaws and app cabs.'
+      },
+      {
+        question: 'How do I reach Amber Fort from Jaipur city center?',
+        answer: 'Amber Fort is situated 11 kilometers north of Jaipur city center. Travelers can hire app-based cabs (Uber or Ola) for approximately ₹250–₹350, board government AC low-floor bus route 5 from Ajmeri Gate, or ride an authorized auto-rickshaw through the scenic pass behind Jal Mahal.',
+        additionalDetails: 'Vehicles drop visitors at the rear parking area, from where golf carts and heritage jeep shuttles operate up to the main Suraj Pol gate.'
+      }
+    ],
     conclusion: 'Jaipur is far more than a checklist of historical monuments—it is an energetic celebration of vibrant Rajasthani living traditions. Whether you are gazing upon the intricate latticework of Hawa Mahal, watching the sunset from the ramparts of Nahargarh, or savoring piping hot pyaaz kachoris at Rawat Mishtan Bhandar, the Pink City leaves an indelible impression on every traveler’s soul.',
     sourcesAndReferences: [
       'Archaeological Survey of India (ASI) Jaipur Circle Records',
@@ -95,7 +110,10 @@ export const blogsData: BlogArticle[] = [
     id: 'udaipur-travel-guide-city-of-lakes',
     slug: 'udaipur-travel-guide-city-of-lakes',
     title: 'Udaipur Travel Guide: Discover the City of Lakes',
-    metaDescription: 'A complete travel guide to Udaipur, Rajasthan. Discover Lake Pichola boat cruises, City Palace, Jag Mandir, Sajjangarh, Mewari delicacies, and romantic ghats.',
+    metaDescription: 'Complete travel guide to Udaipur, Rajasthan: Lake Pichola boat rides, City Palace, Jag Mandir, Sajjangarh Monsoon Palace, and romantic lakeside dining.',
+    primaryKeyword: 'Udaipur travel guide',
+    secondaryKeywords: ['places to visit in Udaipur', 'Lake Pichola boat cruise', 'Udaipur City Palace'],
+    searchIntent: 'Informational',
     category: 'City Guides',
     tags: ['Udaipur', 'City of Lakes', 'Lake Pichola', 'City Palace', 'Mewar', 'Romantic India'],
     publishedDate: 'October 10, 2026',
@@ -170,6 +188,18 @@ export const blogsData: BlogArticle[] = [
       ],
       topAdvice: 'Reserve your tickets for the Dharohar Dance Show at Bagore Ki Haveli by 4:00 PM in the afternoon, as seats sell out quickly during peak winter months.'
     },
+    qaSection: [
+      {
+        question: 'Is a boat ride on Lake Pichola worth the ticket price?',
+        answer: 'Yes, a boat ride on Lake Pichola is widely considered the quintessential Udaipur experience. It provides breathtaking waterfront views of the City Palace facade, passes the floating Taj Lake Palace, and includes an exclusive stopover at the historic 17th-century island gardens of Jag Mandir.',
+        additionalDetails: 'Sunset cruises (around 5:00 PM) cost between ₹550 and ₹850 per person and offer the finest golden hour photography angles.'
+      },
+      {
+        question: 'How many days are recommended to explore Udaipur comfortably?',
+        answer: 'Three full days are ideal to explore Udaipur without rushing. This provides sufficient time for the City Palace museum, an afternoon boat cruise on Lake Pichola, sunset at the Monsoon Palace, morning walks along Gangaur Ghat, and an excursion to nearby Kumbhalgarh Fort or Ranakpur.',
+        additionalDetails: 'Couples and photographers often extend their stay to 4 days to enjoy relaxed lakeside rooftop dining and artisan workshops.'
+      }
+    ],
     conclusion: 'Udaipur possesses a serene grace unmatched anywhere else in northern India. From the soft morning light illuminating Gangaur Ghat to the twinkling evening reflections across Lake Pichola, the City of Lakes invites travelers to slow their pace and immerse themselves in the timeless elegance of Mewar culture.',
     sourcesAndReferences: [
       'Maharana of Mewar Historical Charitable Foundation (MMCF) Records',
@@ -182,7 +212,10 @@ export const blogsData: BlogArticle[] = [
     id: 'jaisalmer-golden-city-thar-desert',
     slug: 'jaisalmer-golden-city-thar-desert',
     title: 'Jaisalmer: Exploring the Golden City and Thar Desert',
-    metaDescription: 'Complete travel guide to Jaisalmer, Rajasthan. Explore the living Sonar Qila, Patwon Ki Haveli, Sam and Khuri sand dunes, desert camping, and camel safaris.',
+    metaDescription: 'Complete travel guide to Jaisalmer: Living Sonar Qila fort, Patwon Ki Haveli, Sam and Khuri sand dunes, luxury desert camping, and camel safaris in the Thar.',
+    primaryKeyword: 'Jaisalmer Thar desert safari',
+    secondaryKeywords: ['Jaisalmer travel guide', 'Jaisalmer Fort Sonar Qila', 'Sam sand dunes desert camp'],
+    searchIntent: 'Informational',
     category: 'City Guides',
     tags: ['Jaisalmer', 'Golden City', 'Thar Desert', 'Sam Sand Dunes', 'Sonar Qila', 'Desert Glamping'],
     publishedDate: 'October 08, 2026',
@@ -257,6 +290,18 @@ export const blogsData: BlogArticle[] = [
       ],
       topAdvice: 'Visit Gadisar Lake at sunrise rather than sunset; you will avoid the crowds and witness the carved stone Tila Ki Pol archway framed by tranquil morning mist and water birds.'
     },
+    qaSection: [
+      {
+        question: 'Which is better: Sam Sand Dunes or Khuri Sand Dunes?',
+        answer: 'Sam Sand Dunes is best for travelers seeking lively cultural entertainment, quad biking, parasailing, and organized desert camp performances. In contrast, Khuri Sand Dunes offers a peaceful, untouched wilderness experience with fewer commercial vehicles and darker skies for stargazing.',
+        additionalDetails: 'Khuri is located 48 km southwest of Jaisalmer and preserves authentic mud-walled village homestays.'
+      },
+      {
+        question: 'Can you stay overnight inside Jaisalmer Fort?',
+        answer: 'Yes, hotels and guesthouses operate inside Jaisalmer Fort because it is a living fortress. However, many conservationists recommend staying in heritage havelis just below the fort walls to avoid overburdening the 800-year-old sandstone foundation with excess water seepage.',
+        additionalDetails: 'Staying outside the fort walls also provides magnificent views of the illuminated fortress ramparts at night.'
+      }
+    ],
     conclusion: 'Jaisalmer is a testament to human resilience in an unforgiving desert landscape. Its golden sandstone architecture, authentic folk music traditions, and boundless star-filled horizons leave travelers with memories of an India that feels genuinely legendary.',
     sourcesAndReferences: [
       'Archaeological Survey of India (ASI) Jodhpur Circle Reports',
@@ -269,7 +314,10 @@ export const blogsData: BlogArticle[] = [
     id: 'jodhpur-travel-guide-blue-city',
     slug: 'jodhpur-travel-guide-blue-city',
     title: 'Jodhpur Travel Guide: The Beauty of the Blue City',
-    metaDescription: 'Discover Jodhpur, Rajasthan: A complete travel guide covering Mehrangarh Fort, Jaswant Thada, the blue Brahmin lanes of Navchokiya, and authentic street food.',
+    metaDescription: 'Discover Jodhpur, the Blue City of Rajasthan: Mehrangarh Fort, Jaswant Thada marble cenotaph, Navchokiya blue alleys, and spicy Mirchi Vada food spots.',
+    primaryKeyword: 'Jodhpur Blue city travel',
+    secondaryKeywords: ['Mehrangarh Fort Jodhpur', 'places to visit in Jodhpur', 'Jaswant Thada memorial'],
+    searchIntent: 'Informational',
     category: 'City Guides',
     tags: ['Jodhpur', 'Blue City', 'Mehrangarh Fort', 'Jaswant Thada', 'Marwar', 'Street Food'],
     publishedDate: 'October 06, 2026',
@@ -343,6 +391,18 @@ export const blogsData: BlogArticle[] = [
       ],
       topAdvice: 'Hire a licensed audio guide at Mehrangarh Fort—narrated with dramatic voice acting, royal music, and authentic ambient sounds, it brings the fort’s dramatic history alive.'
     },
+    qaSection: [
+      {
+        question: 'Why are the houses in Jodhpur painted blue?',
+        answer: 'Historically, Brahmin families painted their houses with an indigo and copper sulfate lime wash to denote priestly status. Beyond religious symbolism, the mineral wash helped deflect intense desert sunlight to keep interior rooms cool and served as a natural insect repellent against desert termites.',
+        additionalDetails: 'Today, the indigo color has become the city’s beloved cultural trademark protected by local municipal preservation heritage guidelines.'
+      },
+      {
+        question: 'How long does a visit to Mehrangarh Fort take?',
+        answer: 'A thorough visit to Mehrangarh Fort and its museum takes between 3 and 4 hours. This permits ample time to inspect the palanquin gallery, royal cradles, armory, Phool Mahal, and ramparts cannon batteries overlooking the old city.',
+        additionalDetails: 'Adventure travelers booking the Flying Fox zipline should add an additional 90 minutes to their schedule.'
+      }
+    ],
     conclusion: 'With its towering fortress, peaceful marble memorials, and lively indigo-hued alleys, Jodhpur provides a deeply authentic taste of traditional Rajasthan. It is a city that balances its martial history with heartwarming Marwari hospitality.',
     sourcesAndReferences: [
       'Mehrangarh Museum Trust Research Publications',
@@ -355,7 +415,10 @@ export const blogsData: BlogArticle[] = [
     id: 'royal-rajasthan-road-trip-itinerary',
     slug: 'royal-rajasthan-road-trip-itinerary',
     title: 'A Royal Rajasthan Road Trip: The Ultimate Itinerary',
-    metaDescription: 'A practical, day-by-day royal Rajasthan road trip itinerary spanning 10 to 14 days. Covers Delhi, Jaipur, Pushkar, Jodhpur, Jaisalmer, and Udaipur with driving times and routing advice.',
+    metaDescription: 'Field-tested 10 to 14-day Rajasthan road trip route: Delhi to Jaipur, Pushkar, Jodhpur, Jaisalmer, and Udaipur with driving times, tolls, and stopovers.',
+    primaryKeyword: 'Rajasthan road trip itinerary',
+    secondaryKeywords: ['Rajasthan travel route 14 days', 'self drive Rajasthan', 'Delhi to Jaipur expressway'],
+    searchIntent: 'Informational',
     category: 'Itineraries',
     tags: ['Road Trip', 'Itinerary', 'Self Drive', 'Travel Route', 'Delhi to Jaipur', 'Rajasthan Guide'],
     publishedDate: 'October 04, 2026',
@@ -431,6 +494,18 @@ export const blogsData: BlogArticle[] = [
       ],
       topAdvice: 'Avoid driving on rural state highways after dark. Stray cattle, unlit agricultural tractors, and lack of streetlighting make daytime driving substantially safer and far more scenic.'
     },
+    qaSection: [
+      {
+        question: 'Are the highways in Rajasthan safe and comfortable for self-drive road trips?',
+        answer: 'Yes, Rajasthan possesses some of the best national highway networks in India, including the modern Delhi–Mumbai Expressway (NE-4), NH-48, and NH-11. Roads are well-surfaced with automated FASTag toll gates, branded petrol stations, and clean food plazas every 50 to 80 kilometers.',
+        additionalDetails: 'Daytime driving is strongly recommended over night driving to avoid encountering stray livestock on rural bypasses.'
+      },
+      {
+        question: 'What is the best route between Jodhpur and Udaipur?',
+        answer: 'The most scenic and rewarding driving route between Jodhpur and Udaipur runs via Pali and the NH-62 / RJ SH-32 corridor, allowing travelers to visit the world-famous carved marble Jain temples of Ranakpur and the mountain fortress walls of Kumbhalgarh Fort.',
+        additionalDetails: 'This 260-kilometer route takes approximately 5.5 to 6.5 hours including a relaxed temple sightseeing lunch stop.'
+      }
+    ],
     conclusion: 'Driving across Rajasthan unlocks an intimate connection with India’s royal heartland that flying or point-to-point train travel simply cannot match. Every roadside dhaba serving piping-hot chai, every village milestone, and every hilltop fortress brings you closer to the living history of the desert state.',
     sourcesAndReferences: [
       'National Highways Authority of India (NHAI) Highway Corridors Guide',
@@ -443,7 +518,10 @@ export const blogsData: BlogArticle[] = [
     id: 'rajasthani-food-guide-traditional-dishes',
     slug: 'rajasthani-food-guide-traditional-dishes',
     title: 'Rajasthani Food Guide: 10 Traditional Dishes You Must Try',
-    metaDescription: 'A mouthwatering culinary guide to Rajasthan: Dal Baati Churma, fiery Laal Maas, Gatte Ki Sabzi, Ker Sangri, Ghewar, and sweet street treats explained.',
+    metaDescription: 'Discover 10 authentic Rajasthani dishes: Dal Baati Churma, fiery Laal Maas, Ker Sangri desert beans, Gatte Ki Sabzi, Ghewar, and street food specialties.',
+    primaryKeyword: 'traditional Rajasthani food',
+    secondaryKeywords: ['Dal Baati Churma recipe', 'Laal Maas mutton curry', 'Rajasthani thali dishes'],
+    searchIntent: 'Informational',
     category: 'Culture & Food',
     tags: ['Rajasthani Food', 'Dal Baati Churma', 'Laal Maas', 'Ghewar', 'Culinary Travel', 'Indian Sweets'],
     publishedDate: 'October 02, 2026',
@@ -504,6 +582,18 @@ export const blogsData: BlogArticle[] = [
       ],
       topAdvice: 'If you want to experience everything in one lavish sitting, book an unlimited traditional Rajasthani thali at heritage restaurants like 1559 AD (Udaipur), Chokhi Dhani (Jaipur), or Gypsy (Jodhpur).'
     },
+    qaSection: [
+      {
+        question: 'What is the traditional way to eat Dal Baati Churma?',
+        answer: 'To eat Dal Baati Churma traditionally, crush the hot baked baati dumpling coarsely in your bowl using your fingers, pour generous ladles of hot panchmel lentil dal over it, add a spoonful of pure desi ghee, and pair each bite with sweet powdered churma and spicy garlic chutney.',
+        additionalDetails: 'Eating with your hands is customary and enhances the textural appreciation of the crispy crust and soft ghee-soaked interior.'
+      },
+      {
+        question: 'How spicy is authentic Rajasthani Laal Maas?',
+        answer: 'Authentic Laal Maas is moderately fiery with a deep smoky warmth derived from whole Mathania dried red chillies, garlic, and mustard oil. While visually bright crimson, high-grade Mathania chillies impart robust flavor and aroma rather than pure scorching heat.',
+        additionalDetails: 'Visitors with lower spice thresholds can request restaurants to prepare it "Kam Teekha" (mild spice).'
+      }
+    ],
     conclusion: 'Rajasthani food is an authentic expression of the land and its history—rich, bold, generous, and unforgettable. Exploring these ten signature dishes will reveal how adversity and royal patronage combined to forge one of the world’s most distinctive culinary traditions.',
     sourcesAndReferences: [
       'Royal Mewar and Marwar Kitchen Manuscripts',
@@ -516,7 +606,10 @@ export const blogsData: BlogArticle[] = [
     id: 'rajasthan-royal-forts-palaces-history',
     slug: 'rajasthan-royal-forts-palaces-history',
     title: 'Rajasthan’s Royal Forts and Palaces: A Journey Through History',
-    metaDescription: 'Discover the iconic UNESCO World Heritage hill forts and palaces of Rajasthan: Amber, Mehrangarh, Chittorgarh, Jaisalmer, Kumbhalgarh, and Udaipur City Palace.',
+    metaDescription: 'Explore UNESCO World Heritage hill forts of Rajasthan: Chittorgarh, Kumbhalgarh, Amber, Mehrangarh, Jaisalmer Sonar Qila, and Junagarh architecture.',
+    primaryKeyword: 'Rajasthan royal hill forts',
+    secondaryKeywords: ['UNESCO hill forts Rajasthan', 'Chittorgarh Fort history', 'Kumbhalgarh Great Wall'],
+    searchIntent: 'Informational',
     category: 'Culture & Food',
     tags: ['Forts', 'Palaces', 'UNESCO Heritage', 'Rajput History', 'Chittorgarh', 'Mehrangarh'],
     publishedDate: 'September 28, 2026',
@@ -584,6 +677,18 @@ export const blogsData: BlogArticle[] = [
       ],
       topAdvice: 'Hire state-certified government guides (identifiable by their official photo badges) or official audio guides rather than unlicensed touts outside the gates.'
     },
+    qaSection: [
+      {
+        question: 'Which is the largest fort in Rajasthan and India?',
+        answer: 'Chittorgarh Fort is the largest fort complex in Rajasthan and all of India. Spread across an expansive 700-acre limestone plateau 180 meters above the plains, the fort perimeter extends over 13 kilometers and houses 65 historic structures including victory towers, palaces, and 22 water bodies.',
+        additionalDetails: 'Visitors should budget at least 4 to 5 hours and hire a licensed vehicle guide to explore the entire north-south expanse.'
+      },
+      {
+        question: 'What makes Kumbhalgarh Fort wall famous worldwide?',
+        answer: 'Kumbhalgarh Fort is famous for having the second-longest continuous fortification wall in the world after the Great Wall of China. Stretching 36 continuous kilometers over Aravali ridges, the thick stone wall incorporates rounded bastions and once defended over 300 temples and royal retreats.',
+        additionalDetails: 'An annual three-day Kumbhalgarh Festival in December illuminates the entire 36-kilometer ramparts with lamps and spotlights.'
+      }
+    ],
     conclusion: 'Rajasthan’s forts and palaces are timeless stone chronicles of courage, artistic brilliance, and engineering mastery. Standing atop their battlements as the desert wind howls through stone jharokhas, you don’t merely observe history—you feel its pulse.',
     sourcesAndReferences: [
       'UNESCO World Heritage Nomination File: Hill Forts of Rajasthan (No. 247rev)',
@@ -596,7 +701,10 @@ export const blogsData: BlogArticle[] = [
     id: 'best-time-to-visit-rajasthan-weather-festivals',
     slug: 'best-time-to-visit-rajasthan-weather-festivals',
     title: 'Best Time to Visit Rajasthan: Weather, Seasons, and Festivals',
-    metaDescription: 'Plan your trip to Rajasthan: Season-by-season weather breakdown, winter peak months, monsoon charm in Udaipur, and major festivals including Pushkar Camel Fair and Desert Festival.',
+    metaDescription: 'Month-by-month guide to the best time to visit Rajasthan: Winter peak season, monsoon charm in Udaipur, Pushkar Camel Fair dates, and summer tips.',
+    primaryKeyword: 'best time to visit Rajasthan',
+    secondaryKeywords: ['Rajasthan weather by month', 'Pushkar Camel Fair schedule', 'Rajasthan winter season'],
+    searchIntent: 'Informational',
     category: 'Budget & Planning',
     tags: ['Weather', 'Seasons', 'Pushkar Fair', 'Desert Festival', 'Travel Planning', 'Monsoon Rajasthan'],
     publishedDate: 'September 24, 2026',
@@ -667,6 +775,18 @@ export const blogsData: BlogArticle[] = [
       ],
       topAdvice: 'If attending the Pushkar Fair, arrive two days before the official tourist festival opens to witness the authentic camel trading among nomads before commercial stalls take over.'
     },
+    qaSection: [
+      {
+        question: 'Is Rajasthan too hot to visit in summer (April to June)?',
+        answer: 'Yes, peak summer temperatures regularly exceed 42°C to 46°C across the Thar Desert and western plains, making midday sightseeing physically exhausting and potentially unsafe. However, Mount Abu remains pleasantly cooler at 28°C to 34°C due to its 1,220-meter altitude in the Aravali Range.',
+        additionalDetails: 'If traveling during summer, confine outdoor activities to early morning hours (6:30 AM to 10:00 AM) and stay in air-conditioned accommodations.'
+      },
+      {
+        question: 'When is the Pushkar Camel Fair held each year?',
+        answer: 'The Pushkar Camel Fair takes place annually during the Hindu lunar month of Kartik (falling between late October and mid-November), concluding on the auspicious night of Kartik Purnima (full moon). Over seven days, pastoralists trade tens of thousands of camels, horses, and cattle alongside folk dance galas.',
+        additionalDetails: 'Exact Gregorian calendar dates shift slightly each year based on lunar cycles; check the official Rajasthan festival schedule.'
+      }
+    ],
     conclusion: 'Whether you seek the royal pageantry of winter festivals or the tranquil romance of rain-swept palace gardens in Udaipur, understanding Rajasthan’s distinct seasonal rhythms ensures your journey is both comfortable and unforgettable.',
     sourcesAndReferences: [
       'India Meteorological Department (IMD) Western Region Climate Data',
@@ -679,7 +799,10 @@ export const blogsData: BlogArticle[] = [
     id: 'hidden-gems-rajasthan-offbeat-travel',
     slug: 'hidden-gems-rajasthan-offbeat-travel',
     title: 'Hidden Gems of Rajasthan: Places Beyond the Popular Tourist Trail',
-    metaDescription: 'Explore the secret side of Rajasthan: Discover Bundi’s stepwells, Osian’s ancient sand temples, the giant wall of Kumbhalgarh, Barmer folk crafts, and peaceful Shekhawati havelis.',
+    metaDescription: 'Explore secret offbeat places in Rajasthan: Bundi stepwells, Osian desert temples, Shekhawati fresco havelis, and ancient Kiradu temples in Barmer.',
+    primaryKeyword: 'hidden gems in Rajasthan',
+    secondaryKeywords: ['offbeat places in Rajasthan', 'Bundi Raniji Ki Baori stepwell', 'Osian desert temples'],
+    searchIntent: 'Informational',
     category: 'Offbeat',
     tags: ['Offbeat Rajasthan', 'Hidden Gems', 'Bundi', 'Kumbhalgarh', 'Osian', 'Shekhawati', 'Stepwells', 'Barmer'],
     publishedDate: 'September 20, 2026',
@@ -761,6 +884,18 @@ export const blogsData: BlogArticle[] = [
       ],
       topAdvice: 'In Bundi, visit Raniji Ki Baori early in the morning when the light cascades down the hundred stone steps, illuminating the elephant-headed stone corbels.'
     },
+    qaSection: [
+      {
+        question: 'Why should travelers visit Bundi instead of only the main tourist cities?',
+        answer: 'Bundi offers an authentic, crowd-free medieval Rajasthan experience with dramatic cliffside ramparts at Taragarh Fort, intact 17th-century miniature frescoes in Chitrashala, and over 50 ancient stepwells without commercial tourist congestion or aggressive market hawkers.',
+        additionalDetails: 'Bundi is conveniently reached in 45 minutes from Kota railway junction or 3.5 hours from Jaipur.'
+      },
+      {
+        question: 'How far is Osian from Jodhpur and can it be visited as a day trip?',
+        answer: 'Osian is located 65 kilometers north of Jodhpur and is easily visited on a 4-to-5-hour day trip by taxi or state express bus along the well-paved NH-125 route. This provides sufficient time to tour the 8th-century Sachiya Mata Temple and experience quiet dunes.',
+        additionalDetails: 'Sunset camel safaris at Osian dunes offer a peaceful alternative to commercial dune camps in Jaisalmer.'
+      }
+    ],
     conclusion: 'Stepping off the well-trodden tourist highway into towns like Bundi, Osian, and Barmer reveals Rajasthan’s quieter, more contemplative soul. These hidden gems reward travelers with unfiltered authenticity and timeless historic beauty.',
     sourcesAndReferences: [
       'Archaeological Survey of India (ASI) Bundi Circle Monographs',
@@ -773,7 +908,10 @@ export const blogsData: BlogArticle[] = [
     id: 'rajasthan-travel-budget-guide-smartly',
     slug: 'rajasthan-travel-budget-guide-smartly',
     title: 'Rajasthan Travel Budget Guide: Plan Your Trip Smartly',
-    metaDescription: 'Complete budget planning guide for Rajasthan: Realistic daily estimates for budget backpackers, mid-range explorers, and luxury heritage travelers. Includes transport, food, stays, and monument fees.',
+    metaDescription: 'Detailed budget guide for Rajasthan: Real daily cost breakdowns for backpackers, mid-range explorers, and luxury heritage stays. Includes train fares and fees.',
+    primaryKeyword: 'Rajasthan travel budget',
+    secondaryKeywords: ['cost of traveling in Rajasthan', 'cheap hotels in Rajasthan', 'budget travel Rajasthan'],
+    searchIntent: 'Informational',
     category: 'Budget & Planning',
     tags: ['Budget Guide', 'Travel Costs', 'Hostels', 'Heritage Hotels', 'Money Saving Tips', 'Rajasthan Trip'],
     publishedDate: 'September 16, 2026',
@@ -844,6 +982,18 @@ export const blogsData: BlogArticle[] = [
       ],
       topAdvice: 'Always agree on auto-rickshaw fares or confirm the meter before sitting down if app-based taxis are unavailable in smaller towns.'
     },
+    qaSection: [
+      {
+        question: 'How much money do I need per day for a mid-range trip to Rajasthan?',
+        answer: 'A comfortable mid-range trip to Rajasthan costs approximately ₹4,500 to ₹7,500 ($55 to $90 USD) per day for a couple. This includes staying in a heritage haveli boutique room, dining at quality rooftop restaurants, hiring app cabs or auto-rickshaws, and paying monument admissions.',
+        additionalDetails: 'Solo backpackers can easily manage on ₹1,500 to ₹2,500 ($18 to $30 USD) per day using hostel dorms and local transport.'
+      },
+      {
+        question: 'Are credit cards and UPI digital payments widely accepted in Rajasthan?',
+        answer: 'UPI digital payments (Google Pay, PhonePe, Paytm) are accepted almost everywhere across Rajasthan, from luxury hotels to tiny roadside street food stalls. Major credit and debit cards work reliably in hotels, restaurants, and ticket counters in major cities.',
+        additionalDetails: 'Carrying ₹1,000 to ₹2,000 in small cash notes (₹50 and ₹100) is still advised for rural tolls, auto rickshaws, and tips.'
+      }
+    ],
     conclusion: 'Traveling smartly in Rajasthan isn’t about sacrificing comfort—it’s about knowing where your rupees go and making intentional choices. With proper planning, a journey through India’s royal land can be both extraordinarily luxurious in memory and astonishingly light on your wallet.',
     sourcesAndReferences: [
       'IRCTC Rail Fare Class Schedules',
