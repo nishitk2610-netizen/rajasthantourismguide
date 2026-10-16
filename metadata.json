@@ -1,0 +1,6 @@
+{
+  "name": "Explore Rajasthan - Royal Land of India",
+  "description": "Discover Rajasthan's magnificent palaces, historic forts, Thar desert, rich culture, and authentic travel guides.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
